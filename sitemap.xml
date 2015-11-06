@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://thinkqob.github.io/about/index.html</loc>
+    <lastmod>2015-11-06T06:01:14.595Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://thinkqob.github.io/2015/11/06/hello-world/</loc>
     <lastmod>2015-11-06T02:36:15.653Z</lastmod>
   </url>
