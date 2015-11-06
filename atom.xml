@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[thinkqob.github.io]]></title>
-  <subtitle><![CDATA[learning note]]></subtitle>
+  <subtitle><![CDATA[learning notes]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://thinkqob.github.io/"/>
   <updated>2015-11-06T02:36:15.653Z</updated>
