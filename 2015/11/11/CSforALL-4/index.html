@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="learn,python," />
+  <meta name="keywords" content="CSforALL,assembly language,python," />
 
 
 
@@ -55,16 +55,16 @@
 
 
 
-<meta name="description" content="看完了 learn python the hard way ,感觉什么也没学会，学到的都是片段，还没办法解决问题。对于CS知道的太少了，需要找门CS的课程来学习学习。然后开始看 CS for All 目前看到第三章，就已经补充RSA加密和质数、求导、微积分等这些早就丢给老师的东西了。因为都是英文的，我英文又一般，一章大概要看两遍才能完全理解，还是要抓紧时间看。为了能解决问题还有好多东西要学，不过学">
+<meta name="description" content="CS for All 第四章讲计算机组成原理，从最基础的与非门二进制讲到汇编语言。涉及到一点离散数学，最大项最小项。感觉这章的内容不是特别重要，只是作为基础需要知道计算机的底层是怎么工作的。遇到了很多不认识的单词，要记住。大项最小项那块也不是很懂，全篇也没能很好的吸收，不过大概的意思是明白了。这章就不看第二遍了，继续往下看，遇到不懂得再查资料或者回过头来再看这章。笔记应该记录的更详细一点。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Learn-Python-0000">
-<meta property="og:url" content="http://thinkqob.github.io/2015/11/06/learn-python-0000/index.html">
+<meta property="og:title" content="CSforALL-4">
+<meta property="og:url" content="http://thinkqob.github.io/2015/11/11/CSforALL-4/index.html">
 <meta property="og:site_name" content="thinkqob.github.io">
-<meta property="og:description" content="看完了 learn python the hard way ,感觉什么也没学会，学到的都是片段，还没办法解决问题。对于CS知道的太少了，需要找门CS的课程来学习学习。然后开始看 CS for All 目前看到第三章，就已经补充RSA加密和质数、求导、微积分等这些早就丢给老师的东西了。因为都是英文的，我英文又一般，一章大概要看两遍才能完全理解，还是要抓紧时间看。为了能解决问题还有好多东西要学，不过学">
-<meta property="og:updated_time" content="2015-11-06T09:28:56.909Z">
+<meta property="og:description" content="CS for All 第四章讲计算机组成原理，从最基础的与非门二进制讲到汇编语言。涉及到一点离散数学，最大项最小项。感觉这章的内容不是特别重要，只是作为基础需要知道计算机的底层是怎么工作的。遇到了很多不认识的单词，要记住。大项最小项那块也不是很懂，全篇也没能很好的吸收，不过大概的意思是明白了。这章就不看第二遍了，继续往下看，遇到不懂得再查资料或者回过头来再看这章。笔记应该记录的更详细一点。">
+<meta property="og:updated_time" content="2015-11-10T16:05:48.152Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Learn-Python-0000">
-<meta name="twitter:description" content="看完了 learn python the hard way ,感觉什么也没学会，学到的都是片段，还没办法解决问题。对于CS知道的太少了，需要找门CS的课程来学习学习。然后开始看 CS for All 目前看到第三章，就已经补充RSA加密和质数、求导、微积分等这些早就丢给老师的东西了。因为都是英文的，我英文又一般，一章大概要看两遍才能完全理解，还是要抓紧时间看。为了能解决问题还有好多东西要学，不过学">
+<meta name="twitter:title" content="CSforALL-4">
+<meta name="twitter:description" content="CS for All 第四章讲计算机组成原理，从最基础的与非门二进制讲到汇编语言。涉及到一点离散数学，最大项最小项。感觉这章的内容不是特别重要，只是作为基础需要知道计算机的底层是怎么工作的。遇到了很多不认识的单词，要记住。大项最小项那块也不是很懂，全篇也没能很好的吸收，不过大概的意思是明白了。这章就不看第二遍了，继续往下看，遇到不懂得再查资料或者回过头来再看这章。笔记应该记录的更详细一点。">
 
 
 
@@ -76,7 +76,7 @@
   };
 </script>
 
-  <title> Learn-Python-0000 | thinkqob.github.io </title>
+  <title> CSforALL-4 | thinkqob.github.io </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -203,7 +203,7 @@
             
             
               
-                Learn-Python-0000
+                CSforALL-4
               
             
           </h1>
@@ -212,8 +212,8 @@
         <div class="post-meta">
           <span class="post-time">
             Posted on
-            <time itemprop="dateCreated" datetime="2015-11-06T17:28:56+08:00" content="2015-11-06">
-              2015-11-06
+            <time itemprop="dateCreated" datetime="2015-11-11T00:05:48+08:00" content="2015-11-11">
+              2015-11-11
             </time>
           </span>
 
@@ -251,9 +251,7 @@
       
 
       
-        <span itemprop="articleBody"><p>看完了 <a href="http://learnpythonthehardway.org/book/" target="_blank" rel="external">learn python the hard way</a> ,感觉什么也没学会，学到的都是片段，还没办法解决问题。对于CS知道的太少了，需要找门CS的课程来学习学习。<br>然后开始看 <a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 目前看到第三章，就已经补充RSA加密和质数、求导、微积分等这些早就丢给老师的东西了。因为都是英文的，我英文又一般，一章大概要看两遍才能完全理解，还是要抓紧时间看。为了能解决问题还有好多东西要学，不过学起来也蛮开心的，就是总是要跟自己的懒惰作斗争。</p>
-<p>想到了几件可以做的事情：<br>    1，用python写个Engima。<br>    2，定期去TPB抓纪录片的磁力链接然后转换成种子文件下载到本地，然后丢到迅雷下载。<br>    3，写个脚本每天去zimuzi.tv签到。<br>    4，写爬虫爬网站。</p>
-<p>然后除了python，git、JSON、Markdown也要了解。</p>
+        <span itemprop="articleBody"><p><a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 第四章讲计算机组成原理，从最基础的与非门二进制讲到汇编语言。涉及到一点离散数学，最大项最小项。感觉这章的内容不是特别重要，只是作为基础需要知道计算机的底层是怎么工作的。遇到了很多不认识的单词，要记住。大项最小项那块也不是很懂，全篇也没能很好的吸收，不过大概的意思是明白了。这章就不看第二遍了，继续往下看，遇到不懂得再查资料或者回过头来再看这章。笔记应该记录的更详细一点。</p>
 </span>
       
     </div>
@@ -262,7 +260,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/learn/" rel="tag">#learn</a>
+            <a href="/tags/CSforALL/" rel="tag">#CSforALL</a>
+          
+            <a href="/tags/assembly-language/" rel="tag">#assembly language</a>
           
             <a href="/tags/python/" rel="tag">#python</a>
           
@@ -273,13 +273,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2015/11/06/learn-python-0000/" rel="next" title="Learn-Python-0000">
+                <i class="fa fa-chevron-left"></i> Learn-Python-0000
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/11/11/CSforALL-4/" rel="prev" title="CSforALL-4">
-                CSforALL-4 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
