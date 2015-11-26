@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn Programming]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://thinkqob.github.io/"/>
-  <updated>2015-11-10T16:12:33.570Z</updated>
+  <updated>2015-11-26T15:06:33.764Z</updated>
   <id>http://thinkqob.github.io/</id>
   
   <author>
@@ -13,6 +13,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[CSforALL-5]]></title>
+    <link href="http://thinkqob.github.io/2015/11/26/CSforALL-5/"/>
+    <id>http://thinkqob.github.io/2015/11/26/CSforALL-5/</id>
+    <published>2015-11-26T15:06:33.764Z</published>
+    <updated>2015-11-26T15:06:33.764Z</updated>
+    <content type="html"><![CDATA[<p>在看<a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 第五章，最后他给的那段代码我发现好多不一样的地方，是不一样但并不一定是错误。在open文件时候附带r和w的时候，上面写的是”r”下面是’w’。这个单双引号的问题估计问题不大但我觉得还是要一致的好，所以我都用单引号。另一个问题是在这段代码里的输入用的是input，因为之前书里都是用的raw_input，也就是说默认用的是python2，但是不一样的地方他也会提醒你说python3里面应该用什么，但是这段代码直接就用了python3？我也不确定。</p>
+<p>另一个问题就是在用pycharm敲代码的时候，这本书里面的Function Name喜欢用首字母大写字符串，这个pycharm会有提醒的，pycharm还会提醒函数之间要用两个空白行来分隔。然后去搜了搜python的编码规范，太复杂的也看不懂，python还没学会。</p>
+<p><a href="http://jasonding1354.github.io/2015/01/23/Python/%E3%80%90python%E3%80%91Python%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/" target="_blank" rel="external">Python编码规范</a><br><a href="http://zh-google-styleguide.readthedocs.org/en/latest/google-python-styleguide/" target="_blank" rel="external">Google Python 风格指南 - 中文版</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在看<a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 第五章，最后他给的那段代码我发现好多不一样的地方，是不一样但并不一定是错误。在open文件时]]>
+    </summary>
+    
+      <category term="learn" scheme="http://thinkqob.github.io/tags/learn/"/>
+    
+      <category term="python" scheme="http://thinkqob.github.io/tags/python/"/>
+    
+      <category term="Python" scheme="http://thinkqob.github.io/categories/Python/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[CSforALL-4-ComputerOrganization]]></title>
@@ -49,28 +71,6 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p>还在看CS for All，已经看到第六章了，一共七章，第五章讲函数，第六章讲面向对象编程，前面讲讲Class看的还挺明白的，后面开始讲了一些VPython的东西就看不太明白了，简单的看了一下，直接跳过看结尾，然后看下一章。之前第四章讲内存寄存器汇编什么的，也是看了一部分就]]>
-    </summary>
-    
-      <category term="learn" scheme="http://thinkqob.github.io/tags/learn/"/>
-    
-      <category term="python" scheme="http://thinkqob.github.io/tags/python/"/>
-    
-      <category term="Python" scheme="http://thinkqob.github.io/categories/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Learn-Python-0001]]></title>
-    <link href="http://thinkqob.github.io/2015/11/26/CSforALL-5/"/>
-    <id>http://thinkqob.github.io/2015/11/26/CSforALL-5/</id>
-    <published>2015-11-26T15:03:55.014Z</published>
-    <updated>2015-11-18T08:50:21.198Z</updated>
-    <content type="html"><![CDATA[<p>在看<a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 第五章，最后他给的那段代码我发现好多不一样的地方，是不一样但并不一定是错误。在open文件时候附带r和w的时候，上面写的是”r”下面是’w’。这个单双引号的问题估计问题不大但我觉得还是要一致的好，所以我都用单引号。另一个问题是在这段代码里的输入用的是input，因为之前书里都是用的raw_input，也就是说默认用的是python2，但是不一样的地方他也会提醒你说python3里面应该用什么，但是这段代码直接就用了python3？我也不确定。</p>
-<p>另一个问题就是在用pycharm敲代码的时候，这本书里面的Function Name喜欢用首字母大写字符串，这个pycharm会有提醒的，pycharm还会提醒函数之间要用两个空白行来分隔。然后去搜了搜python的编码规范，太复杂的也看不懂，python还没学会。</p>
-<p><a href="http://jasonding1354.github.io/2015/01/23/Python/%E3%80%90python%E3%80%91Python%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/" target="_blank" rel="external">Python编码规范</a><br><a href="http://zh-google-styleguide.readthedocs.org/en/latest/google-python-styleguide/" target="_blank" rel="external">Google Python 风格指南 - 中文版</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>在看<a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 第五章，最后他给的那段代码我发现好多不一样的地方，是不一样但并不一定是错误。在open文件时]]>
     </summary>
     
       <category term="learn" scheme="http://thinkqob.github.io/tags/learn/"/>
