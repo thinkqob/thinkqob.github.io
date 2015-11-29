@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn Programming]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://thinkqob.github.io/"/>
-  <updated>2015-11-26T15:14:32.965Z</updated>
+  <updated>2015-11-29T03:37:51.697Z</updated>
   <id>http://thinkqob.github.io/</id>
   
   <author>
@@ -13,6 +13,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[CSforALL-7]]></title>
+    <link href="http://thinkqob.github.io/2015/11/29/CSforALL-7/"/>
+    <id>http://thinkqob.github.io/2015/11/29/CSforALL-7/</id>
+    <published>2015-11-29T03:37:51.697Z</published>
+    <updated>2015-11-29T03:37:51.697Z</updated>
+    <content type="html"><![CDATA[<p>第七章讲的是计算机上的三种问题，简单的，困难的，和不可能的。看了一半并看不懂。遇到好多不认识的单词和数学公式和名词，单词查了之后也不能理解他真正的意思，暂时不看了。这章更多的是在讲计算机理论，这个虽然很重要但是在学好python之前可以放一下，回过头来再重新看CSforALL。昨天又翻了一下learn python the hard way，发现除了和CSforALL重复的地方之外，其他的都忘记了。还是回去再快速的看一遍lpthw吧，Python核心编程涵盖的很全面也有点啰嗦，不过后面几章网络编程什么的还没有见过，应该可以看看的。</p>
+<p>总之现在的目标就是学好python为主，补充CS的知识为辅。先这么做，不对再调整。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>第七章讲的是计算机上的三种问题，简单的，困难的，和不可能的。看了一半并看不懂。遇到好多不认识的单词和数学公式和名词，单词查了之后也不能理解他真正的意思，暂时不看了。这章更多的是在讲计算机理论，这个虽然很重要但是在学好python之前可以放一下，回过头来再重新看CSforAL]]>
+    </summary>
+    
+      <category term="learn" scheme="http://thinkqob.github.io/tags/learn/"/>
+    
+      <category term="python" scheme="http://thinkqob.github.io/tags/python/"/>
+    
+      <category term="CSforALL" scheme="http://thinkqob.github.io/categories/CSforALL/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[CSforALL-6]]></title>
