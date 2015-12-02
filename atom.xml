@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn Programming]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://thinkqob.github.io/"/>
-  <updated>2015-11-29T03:37:51.697Z</updated>
+  <updated>2015-12-02T15:16:51.632Z</updated>
   <id>http://thinkqob.github.io/</id>
   
   <author>
@@ -13,6 +13,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Python tutorial 2.7.10]]></title>
+    <link href="http://thinkqob.github.io/2015/12/02/Python%20tutorial/"/>
+    <id>http://thinkqob.github.io/2015/12/02/Python tutorial/</id>
+    <published>2015-12-02T15:16:51.632Z</published>
+    <updated>2015-12-02T15:16:51.632Z</updated>
+    <content type="html"><![CDATA[<p>CSforALL看完之后开始重新看LPTHW，看的是英文版，回顾复习一下之前所学的内容，看的很快，但是看到ex41的时候一点印象都没有，面向对象的东西还是理解的不够透彻。顺便看了看Python tutorial，中文版，读起来顺手了很多。基本都是之前看到过的内容，但是也有部分没涉及到的用法和函数，对之前是一个比较好的扩充，有空还要看一下lib库的文档。</p>
+<p>完成这两本书之后，接下来的计划是看Python核心编程，抽时间还是要看看CS50等计算机导论之类的课程。一边看一遍写点脚本什么的吧。之前写了一个将字母和数字转换成morse code的脚本，自我感觉良好。python会用之后纠结一下Flask和Django，然后把自己的网站搭建起来吧。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>CSforALL看完之后开始重新看LPTHW，看的是英文版，回顾复习一下之前所学的内容，看的很快，但是看到ex41的时候一点印象都没有，面向对象的东西还是理解的不够透彻。顺便看了看Python tutorial，中文版，读起来顺手了很多。基本都是之前看到过的内容，但是也有部]]>
+    </summary>
+    
+      <category term="learn" scheme="http://thinkqob.github.io/tags/learn/"/>
+    
+      <category term="python" scheme="http://thinkqob.github.io/tags/python/"/>
+    
+      <category term="Python tutorial" scheme="http://thinkqob.github.io/categories/Python-tutorial/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[CSforALL-7]]></title>

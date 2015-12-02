@@ -55,16 +55,19 @@
 
 
 
-<meta name="description" content="在看CS for All 第五章，最后他给的那段代码我发现好多不一样的地方，是不一样但并不一定是错误。在open文件时候附带r和w的时候，上面写的是”r”下面是’w’。这个单双引号的问题估计问题不大但我觉得还是要一致的好，所以我都用单引号。另一个问题是在这段代码里的输入用的是input，因为之前书里都是用的raw_input，也就是说默认用的是python2，但是不一样的地方他也会提醒你说pyth">
+<meta name="description" content="CSforALL看完之后开始重新看LPTHW，看的是英文版，回顾复习一下之前所学的内容，看的很快，但是看到ex41的时候一点印象都没有，面向对象的东西还是理解的不够透彻。顺便看了看Python tutorial，中文版，读起来顺手了很多。基本都是之前看到过的内容，但是也有部分没涉及到的用法和函数，对之前是一个比较好的扩充，有空还要看一下lib库的文档。
+完成这两本书之后，接下来的计划是看Pytho">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSforALL-5">
-<meta property="og:url" content="http://thinkqob.github.io/2015/11/26/CSforALL-5/index.html">
+<meta property="og:title" content="Python tutorial 2.7.10">
+<meta property="og:url" content="http://thinkqob.github.io/2015/12/02/Python tutorial/index.html">
 <meta property="og:site_name" content="thinkqob.github.io">
-<meta property="og:description" content="在看CS for All 第五章，最后他给的那段代码我发现好多不一样的地方，是不一样但并不一定是错误。在open文件时候附带r和w的时候，上面写的是”r”下面是’w’。这个单双引号的问题估计问题不大但我觉得还是要一致的好，所以我都用单引号。另一个问题是在这段代码里的输入用的是input，因为之前书里都是用的raw_input，也就是说默认用的是python2，但是不一样的地方他也会提醒你说pyth">
-<meta property="og:updated_time" content="2015-11-26T15:14:28.384Z">
+<meta property="og:description" content="CSforALL看完之后开始重新看LPTHW，看的是英文版，回顾复习一下之前所学的内容，看的很快，但是看到ex41的时候一点印象都没有，面向对象的东西还是理解的不够透彻。顺便看了看Python tutorial，中文版，读起来顺手了很多。基本都是之前看到过的内容，但是也有部分没涉及到的用法和函数，对之前是一个比较好的扩充，有空还要看一下lib库的文档。
+完成这两本书之后，接下来的计划是看Pytho">
+<meta property="og:updated_time" content="2015-12-02T15:16:51.632Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSforALL-5">
-<meta name="twitter:description" content="在看CS for All 第五章，最后他给的那段代码我发现好多不一样的地方，是不一样但并不一定是错误。在open文件时候附带r和w的时候，上面写的是”r”下面是’w’。这个单双引号的问题估计问题不大但我觉得还是要一致的好，所以我都用单引号。另一个问题是在这段代码里的输入用的是input，因为之前书里都是用的raw_input，也就是说默认用的是python2，但是不一样的地方他也会提醒你说pyth">
+<meta name="twitter:title" content="Python tutorial 2.7.10">
+<meta name="twitter:description" content="CSforALL看完之后开始重新看LPTHW，看的是英文版，回顾复习一下之前所学的内容，看的很快，但是看到ex41的时候一点印象都没有，面向对象的东西还是理解的不够透彻。顺便看了看Python tutorial，中文版，读起来顺手了很多。基本都是之前看到过的内容，但是也有部分没涉及到的用法和函数，对之前是一个比较好的扩充，有空还要看一下lib库的文档。
+完成这两本书之后，接下来的计划是看Pytho">
 
 
 
@@ -76,7 +79,7 @@
   };
 </script>
 
-  <title> CSforALL-5 | thinkqob.github.io </title>
+  <title> Python tutorial 2.7.10 | thinkqob.github.io </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -203,7 +206,7 @@
             
             
               
-                CSforALL-5
+                Python tutorial 2.7.10
               
             
           </h1>
@@ -212,8 +215,8 @@
         <div class="post-meta">
           <span class="post-time">
             Posted on
-            <time itemprop="dateCreated" datetime="2015-11-26T23:14:28+08:00" content="2015-11-26">
-              2015-11-26
+            <time itemprop="dateCreated" datetime="2015-12-02T23:16:51+08:00" content="2015-12-02">
+              2015-12-02
             </time>
           </span>
 
@@ -222,8 +225,8 @@
               &nbsp; | &nbsp; In
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/CSforALL/" itemprop="url" rel="index">
-                    <span itemprop="name">CSforALL</span>
+                  <a href="/categories/Python-tutorial/" itemprop="url" rel="index">
+                    <span itemprop="name">Python tutorial</span>
                   </a>
                 </span>
 
@@ -251,9 +254,8 @@
       
 
       
-        <span itemprop="articleBody"><p>在看<a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 第五章，最后他给的那段代码我发现好多不一样的地方，是不一样但并不一定是错误。在open文件时候附带r和w的时候，上面写的是”r”下面是’w’。这个单双引号的问题估计问题不大但我觉得还是要一致的好，所以我都用单引号。另一个问题是在这段代码里的输入用的是input，因为之前书里都是用的raw_input，也就是说默认用的是python2，但是不一样的地方他也会提醒你说python3里面应该用什么，但是这段代码直接就用了python3？我也不确定。</p>
-<p>另一个问题就是在用pycharm敲代码的时候，这本书里面的Function Name喜欢用首字母大写字符串，这个pycharm会有提醒的，pycharm还会提醒函数之间要用两个空白行来分隔。然后去搜了搜python的编码规范，太复杂的也看不懂，python还没学会。</p>
-<p><a href="http://jasonding1354.github.io/2015/01/23/Python/%E3%80%90python%E3%80%91Python%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/" target="_blank" rel="external">Python编码规范</a><br><a href="http://zh-google-styleguide.readthedocs.org/en/latest/google-python-styleguide/" target="_blank" rel="external">Google Python 风格指南 - 中文版</a></p>
+        <span itemprop="articleBody"><p>CSforALL看完之后开始重新看LPTHW，看的是英文版，回顾复习一下之前所学的内容，看的很快，但是看到ex41的时候一点印象都没有，面向对象的东西还是理解的不够透彻。顺便看了看Python tutorial，中文版，读起来顺手了很多。基本都是之前看到过的内容，但是也有部分没涉及到的用法和函数，对之前是一个比较好的扩充，有空还要看一下lib库的文档。</p>
+<p>完成这两本书之后，接下来的计划是看Python核心编程，抽时间还是要看看CS50等计算机导论之类的课程。一边看一遍写点脚本什么的吧。之前写了一个将字母和数字转换成morse code的脚本，自我感觉良好。python会用之后纠结一下Flask和Django，然后把自己的网站搭建起来吧。</p>
 </span>
       
     </div>
@@ -273,17 +275,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/26/CSforALL-4/" rel="next" title="CSforALL-4">
-                <i class="fa fa-chevron-left"></i> CSforALL-4
+              <a href="/2015/11/29/CSforALL-7/" rel="next" title="CSforALL-7">
+                <i class="fa fa-chevron-left"></i> CSforALL-7
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/11/26/CSforALL-6/" rel="prev" title="CSforALL-6">
-                CSforALL-6 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
