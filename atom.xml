@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn Programming]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://thinkqob.github.io/"/>
-  <updated>2015-12-08T02:11:47.827Z</updated>
+  <updated>2015-12-08T15:40:14.632Z</updated>
   <id>http://thinkqob.github.io/</id>
   
   <author>
@@ -18,10 +18,11 @@
     <title><![CDATA[install LNMP]]></title>
     <link href="http://thinkqob.github.io/2015/12/08/install-LNMP/"/>
     <id>http://thinkqob.github.io/2015/12/08/install-LNMP/</id>
-    <published>2015-12-08T02:11:47.827Z</published>
-    <updated>2015-12-08T02:11:47.827Z</updated>
-    <content type="html"><![CDATA[<p>[root@loaclhost ~]$ sudo vi /etc/sudoers<br>user    ALL=(ALL)       ALL</p>
-<p>[user@loaclhost ~]$ sudo yum update<br>[user@loaclhost ~]$ sudo yum upgrade</p>
+    <published>2015-12-08T15:40:14.632Z</published>
+    <updated>2015-12-08T15:40:14.632Z</updated>
+    <content type="html"><![CDATA[<p><code>[root@loaclhost ~]$ sudo vi /etc/sudoers
+user    ALL=(ALL)       ALL</code></p>
+<p><code>[user@loaclhost ~]$ sudo yum update</code><br><code>[user@loaclhost ~]$ sudo yum upgrade</code></p>
 <p>安装nginx<br>[user@loaclhost ~]$ sudo yum install epel-release<br>[user@loaclhost ~]$ sudo yum install nginx<br>[user@loaclhost ~]$ sudo systemctl start nginx<br>[user@loaclhost ~]$ sudo systemctl enable nginx.service<br>[user@loaclhost ~]$ sudo systemctl reload nginx.service</p>
 <p>[user@loaclhost ~]$ sudo vi /etc/nginx/conf.d/user.conf</p>
 <p>server {<br>    listen       80;<br>    server_name  domainname.com;</p>
@@ -64,8 +65,9 @@
 <p>安装wordpress和自动更新<br>[user@loaclhost ~]$ wget <a href="http://wordpress.org/latest.tar.gz" target="_blank" rel="external">http://wordpress.org/latest.tar.gz</a>;<br>[user@loaclhost ~]$ chown -R nginx:nginx wp-content<br>[user@loaclhost ~]$ vi wp-config.php<br>添加<br>define(‘FS_METHOD’, ‘direct’);</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>[root@loaclhost ~]$ sudo vi /etc/sudoers<br>user    ALL=(ALL)       ALL</p>
-<p>[user@loaclhost ~]$ sudo yum update<br>[user@loaclhost ~]$]]>
+    <![CDATA[<p><code>[root@loaclhost ~]$ sudo vi /etc/sudoers
+user    ALL=(ALL)       ALL</code></p>
+<p><code>[user@loaclhost ~]$ sudo yum update</code>]]>
     </summary>
     
       <category term="LNMP" scheme="http://thinkqob.github.io/tags/LNMP/"/>
