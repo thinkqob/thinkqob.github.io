@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[thinkqob.github.io]]></title>
+  <title><![CDATA[internal]]></title>
   <subtitle><![CDATA[Learn Programming]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://thinkqob.github.io/"/>
+  <link href="http://blog.lidongwei.com/"/>
   <updated>2015-12-09T09:39:24.708Z</updated>
-  <id>http://thinkqob.github.io/</id>
+  <id>http://blog.lidongwei.com/</id>
   
   <author>
     <name><![CDATA[Thinkqob]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[Install LNMP on CentOS7]]></title>
-    <link href="http://thinkqob.github.io/2015/12/09/7%20Install%20LNMP%20on%20CentOS7/"/>
-    <id>http://thinkqob.github.io/2015/12/09/7 Install LNMP on CentOS7/</id>
+    <link href="http://blog.lidongwei.com/2015/12/09/7%20Install%20LNMP%20on%20CentOS7/"/>
+    <id>http://blog.lidongwei.com/2015/12/09/7 Install LNMP on CentOS7/</id>
     <published>2015-12-09T09:39:24.708Z</published>
     <updated>2015-12-09T09:39:24.708Z</updated>
     <content type="html"><![CDATA[<p>安装nginx<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">[user@loaclhost ~]$ sudo yum <span class="keyword">update</span></span><br><span class="line">[user@loaclhost ~]$ sudo yum upgrade</span><br><span class="line">[user@loaclhost ~]$ sudo yum install epel-release</span><br><span class="line">[user@loaclhost ~]$ sudo yum install nginx</span><br><span class="line">[user@loaclhost ~]$ sudo systemctl <span class="keyword">start</span> nginx</span><br><span class="line">[user@loaclhost ~]$ sudo systemctl enable nginx.service</span><br><span class="line">[user@loaclhost ~]$ sudo systemctl reload nginx.service</span><br><span class="line"></span><br><span class="line">[user@loaclhost ~]$ sudo vi /etc/nginx/conf.d/user.conf</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen       <span class="number">80</span>;</span><br><span class="line">    server_name  domainname.com;</span><br><span class="line"></span><br><span class="line">    # note that these lines are originally from the <span class="string">"location /"</span> block</span><br><span class="line">    root   /home/user/www;</span><br><span class="line">    index index.php index.html index.htm;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ =<span class="number">404</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    error_page <span class="number">404</span> /<span class="number">404</span>.html;</span><br><span class="line">    error_page <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span> /<span class="number">50</span>x.html;</span><br><span class="line">    location = /<span class="number">50</span>x.html &#123;</span><br><span class="line">        root /usr/share/nginx/html;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location ~ \.php$ &#123;</span><br><span class="line">        try_files <span class="variable">$uri</span> =<span class="number">404</span>;</span><br><span class="line">        fastcgi_split_path_info ^(.+\.php)(/.+)$;</span><br><span class="line">        fastcgi_pass unix:/var/run/php-fpm/php-fpm.sock;</span><br><span class="line">        fastcgi_index index.php;</span><br><span class="line">        fastcgi_param SCRIPT_FILENAME <span class="variable">$document</span>_root<span class="variable">$fastcgi</span>_script_name;</span><br><span class="line">        include fastcgi_params;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -33,18 +33,18 @@
     <![CDATA[<p>安装nginx<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span>]]>
     </summary>
     
-      <category term="LNMP" scheme="http://thinkqob.github.io/tags/LNMP/"/>
+      <category term="LNMP" scheme="http://blog.lidongwei.com/tags/LNMP/"/>
     
-      <category term="Linux" scheme="http://thinkqob.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="http://blog.lidongwei.com/tags/Linux/"/>
     
-      <category term="Linux" scheme="http://thinkqob.github.io/categories/Linux/"/>
+      <category term="Linux" scheme="http://blog.lidongwei.com/categories/Linux/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Install Scrapy and Flask]]></title>
-    <link href="http://thinkqob.github.io/2015/12/09/8%20Install%20Scrapy%20and%20Flask/"/>
-    <id>http://thinkqob.github.io/2015/12/09/8 Install Scrapy and Flask/</id>
+    <link href="http://blog.lidongwei.com/2015/12/09/8%20Install%20Scrapy%20and%20Flask/"/>
+    <id>http://blog.lidongwei.com/2015/12/09/8 Install Scrapy and Flask/</id>
     <published>2015-12-09T09:38:46.974Z</published>
     <updated>2015-12-09T09:38:46.974Z</updated>
     <content type="html"><![CDATA[<p>安装python<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]$ sudo yum install <span class="keyword">python</span> <span class="keyword">python</span>-devel <span class="keyword">python</span>-setuptools <span class="keyword">python</span>-pip</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]$ sudo yum install <span class="keyword">python</span>-lxml <span class="keyword">python</span>-cffi</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]$ sudo pip install --upgrade pip</span><br></pre></td></tr></table></figure></p>
@@ -55,18 +55,18 @@
     <![CDATA[<p>安装python<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><b]]>
     </summary>
     
-      <category term="Linux" scheme="http://thinkqob.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="http://blog.lidongwei.com/tags/Linux/"/>
     
-      <category term="Python" scheme="http://thinkqob.github.io/tags/Python/"/>
+      <category term="Python" scheme="http://blog.lidongwei.com/tags/Python/"/>
     
-      <category term="Python" scheme="http://thinkqob.github.io/categories/Python/"/>
+      <category term="Python" scheme="http://blog.lidongwei.com/categories/Python/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Python tutorial 2.7.10]]></title>
-    <link href="http://thinkqob.github.io/2015/12/09/6%20Python%20tutorial%202.7.10/"/>
-    <id>http://thinkqob.github.io/2015/12/09/6 Python tutorial 2.7.10/</id>
+    <link href="http://blog.lidongwei.com/2015/12/09/6%20Python%20tutorial%202.7.10/"/>
+    <id>http://blog.lidongwei.com/2015/12/09/6 Python tutorial 2.7.10/</id>
     <published>2015-12-09T09:22:02.540Z</published>
     <updated>2015-12-09T09:17:16.422Z</updated>
     <content type="html"><![CDATA[<p>CSforALL看完之后开始重新看LPTHW，看的是英文版，回顾复习一下之前所学的内容，看的很快，但是看到ex41的时候一点印象都没有，面向对象的东西还是理解的不够透彻。顺便看了看Python tutorial，中文版，读起来顺手了很多。基本都是之前看到过的内容，但是也有部分没涉及到的用法和函数，对之前是一个比较好的扩充，有空还要看一下lib库的文档。</p>
@@ -76,18 +76,18 @@
     <![CDATA[<p>CSforALL看完之后开始重新看LPTHW，看的是英文版，回顾复习一下之前所学的内容，看的很快，但是看到ex41的时候一点印象都没有，面向对象的东西还是理解的不够透彻。顺便看了看Python tutorial，中文版，读起来顺手了很多。基本都是之前看到过的内容，但是也有部]]>
     </summary>
     
-      <category term="learn" scheme="http://thinkqob.github.io/tags/learn/"/>
+      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
     
-      <category term="python" scheme="http://thinkqob.github.io/tags/python/"/>
+      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
     
-      <category term="Python" scheme="http://thinkqob.github.io/categories/Python/"/>
+      <category term="Python" scheme="http://blog.lidongwei.com/categories/Python/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[CSforALL-7]]></title>
-    <link href="http://thinkqob.github.io/2015/12/09/5%20CSforALL-7/"/>
-    <id>http://thinkqob.github.io/2015/12/09/5 CSforALL-7/</id>
+    <link href="http://blog.lidongwei.com/2015/12/09/5%20CSforALL-7/"/>
+    <id>http://blog.lidongwei.com/2015/12/09/5 CSforALL-7/</id>
     <published>2015-12-09T09:20:18.258Z</published>
     <updated>2015-12-09T09:17:34.443Z</updated>
     <content type="html"><![CDATA[<p>第七章讲的是计算机上的三种问题，简单的，困难的，和不可能的。看了一半并看不懂。遇到好多不认识的单词和数学公式和名词，单词查了之后也不能理解他真正的意思，暂时不看了。这章更多的是在讲计算机理论，这个虽然很重要但是在学好python之前可以放一下，回过头来再重新看CSforALL。昨天又翻了一下learn python the hard way，发现除了和CSforALL重复的地方之外，其他的都忘记了。还是回去再快速的看一遍lpthw吧，Python核心编程涵盖的很全面也有点啰嗦，不过后面几章网络编程什么的还没有见过，应该可以看看的。</p>
@@ -97,18 +97,18 @@
     <![CDATA[<p>第七章讲的是计算机上的三种问题，简单的，困难的，和不可能的。看了一半并看不懂。遇到好多不认识的单词和数学公式和名词，单词查了之后也不能理解他真正的意思，暂时不看了。这章更多的是在讲计算机理论，这个虽然很重要但是在学好python之前可以放一下，回过头来再重新看CSforAL]]>
     </summary>
     
-      <category term="learn" scheme="http://thinkqob.github.io/tags/learn/"/>
+      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
     
-      <category term="python" scheme="http://thinkqob.github.io/tags/python/"/>
+      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
     
-      <category term="CSforALL" scheme="http://thinkqob.github.io/categories/CSforALL/"/>
+      <category term="CSforALL" scheme="http://blog.lidongwei.com/categories/CSforALL/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[CSforALL-6]]></title>
-    <link href="http://thinkqob.github.io/2015/12/09/4%20CSforALL-6/"/>
-    <id>http://thinkqob.github.io/2015/12/09/4 CSforALL-6/</id>
+    <link href="http://blog.lidongwei.com/2015/12/09/4%20CSforALL-6/"/>
+    <id>http://blog.lidongwei.com/2015/12/09/4 CSforALL-6/</id>
     <published>2015-12-09T09:20:14.397Z</published>
     <updated>2015-12-09T09:17:33.628Z</updated>
     <content type="html"><![CDATA[<p>还在看CS for All，已经看到第六章了，一共七章，第五章讲函数，第六章讲面向对象编程，前面讲讲Class看的还挺明白的，后面开始讲了一些VPython的东西就看不太明白了，简单的看了一下，直接跳过看结尾，然后看下一章。之前第四章讲内存寄存器汇编什么的，也是看了一部分就直接跳过了。这章的VPython也直接跳过吧，继续往下看，碰到问题再回过头来认真看看，或者在其他书中会覆盖到这些知识点。</p>
@@ -119,18 +119,18 @@
     <![CDATA[<p>还在看CS for All，已经看到第六章了，一共七章，第五章讲函数，第六章讲面向对象编程，前面讲讲Class看的还挺明白的，后面开始讲了一些VPython的东西就看不太明白了，简单的看了一下，直接跳过看结尾，然后看下一章。之前第四章讲内存寄存器汇编什么的，也是看了一部分就]]>
     </summary>
     
-      <category term="learn" scheme="http://thinkqob.github.io/tags/learn/"/>
+      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
     
-      <category term="python" scheme="http://thinkqob.github.io/tags/python/"/>
+      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
     
-      <category term="CSforALL" scheme="http://thinkqob.github.io/categories/CSforALL/"/>
+      <category term="CSforALL" scheme="http://blog.lidongwei.com/categories/CSforALL/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[CSforALL-5]]></title>
-    <link href="http://thinkqob.github.io/2015/12/09/3%20CSforALL-5/"/>
-    <id>http://thinkqob.github.io/2015/12/09/3 CSforALL-5/</id>
+    <link href="http://blog.lidongwei.com/2015/12/09/3%20CSforALL-5/"/>
+    <id>http://blog.lidongwei.com/2015/12/09/3 CSforALL-5/</id>
     <published>2015-12-09T09:20:10.884Z</published>
     <updated>2015-12-09T09:17:32.813Z</updated>
     <content type="html"><![CDATA[<p>在看<a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 第五章，最后他给的那段代码我发现好多不一样的地方，是不一样但并不一定是错误。在open文件时候附带r和w的时候，上面写的是”r”下面是’w’。这个单双引号的问题估计问题不大但我觉得还是要一致的好，所以我都用单引号。另一个问题是在这段代码里的输入用的是input，因为之前书里都是用的raw_input，也就是说默认用的是python2，但是不一样的地方他也会提醒你说python3里面应该用什么，但是这段代码直接就用了python3？我也不确定。</p>
@@ -141,18 +141,18 @@
     <![CDATA[<p>在看<a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 第五章，最后他给的那段代码我发现好多不一样的地方，是不一样但并不一定是错误。在open文件时]]>
     </summary>
     
-      <category term="learn" scheme="http://thinkqob.github.io/tags/learn/"/>
+      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
     
-      <category term="python" scheme="http://thinkqob.github.io/tags/python/"/>
+      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
     
-      <category term="CSforALL" scheme="http://thinkqob.github.io/categories/CSforALL/"/>
+      <category term="CSforALL" scheme="http://blog.lidongwei.com/categories/CSforALL/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[CSforALL-4]]></title>
-    <link href="http://thinkqob.github.io/2015/12/09/2%20CSforALL-4/"/>
-    <id>http://thinkqob.github.io/2015/12/09/2 CSforALL-4/</id>
+    <link href="http://blog.lidongwei.com/2015/12/09/2%20CSforALL-4/"/>
+    <id>http://blog.lidongwei.com/2015/12/09/2 CSforALL-4/</id>
     <published>2015-12-09T09:20:05.629Z</published>
     <updated>2015-12-09T09:17:31.511Z</updated>
     <content type="html"><![CDATA[<p><a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 第四章讲计算机组成原理，从最基础的与非门二进制讲到汇编语言。涉及到一点离散数学，最大项最小项。感觉这章的内容不是特别重要，只是作为基础需要知道计算机的底层是怎么工作的。遇到了很多不认识的单词，要记住。大项最小项那块也不是很懂，全篇也没能很好的吸收，不过大概的意思是明白了。这章就不看第二遍了，继续往下看，遇到不懂得再查资料或者回过头来再看这章。笔记应该记录的更详细一点。</p>
@@ -162,20 +162,20 @@
     <![CDATA[<p><a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 第四章讲计算机组成原理，从最基础的与非门二进制讲到汇编语言。涉及到一点离散数学，最大项最小项。感]]>
     </summary>
     
-      <category term="CSforALL" scheme="http://thinkqob.github.io/tags/CSforALL/"/>
+      <category term="CSforALL" scheme="http://blog.lidongwei.com/tags/CSforALL/"/>
     
-      <category term="assembly language" scheme="http://thinkqob.github.io/tags/assembly-language/"/>
+      <category term="assembly language" scheme="http://blog.lidongwei.com/tags/assembly-language/"/>
     
-      <category term="python" scheme="http://thinkqob.github.io/tags/python/"/>
+      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
     
-      <category term="CSforALL" scheme="http://thinkqob.github.io/categories/CSforALL/"/>
+      <category term="CSforALL" scheme="http://blog.lidongwei.com/categories/CSforALL/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Learn-Python-0000]]></title>
-    <link href="http://thinkqob.github.io/2015/12/09/1%20learn-python-0000/"/>
-    <id>http://thinkqob.github.io/2015/12/09/1 learn-python-0000/</id>
+    <link href="http://blog.lidongwei.com/2015/12/09/1%20learn-python-0000/"/>
+    <id>http://blog.lidongwei.com/2015/12/09/1 learn-python-0000/</id>
     <published>2015-12-09T09:19:55.570Z</published>
     <updated>2015-12-09T09:17:38.819Z</updated>
     <content type="html"><![CDATA[<p>看完了 <a href="http://learnpythonthehardway.org/book/" target="_blank" rel="external">learn python the hard way</a> ,感觉什么也没学会，学到的都是片段，还没办法解决问题。对于CS知道的太少了，需要找门CS的课程来学习学习。<br>然后开始看 <a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 目前看到第三章，就已经补充RSA加密和质数、求导、微积分等这些早就丢给老师的东西了。因为都是英文的，我英文又一般，一章大概要看两遍才能完全理解，还是要抓紧时间看。为了能解决问题还有好多东西要学，不过学起来也蛮开心的，就是总是要跟自己的懒惰作斗争。</p>
@@ -186,11 +186,11 @@
     <![CDATA[<p>看完了 <a href="http://learnpythonthehardway.org/book/" target="_blank" rel="external">learn python the hard way</a> ,感觉什么也没学会，学到的都是片段，还没办法解]]>
     </summary>
     
-      <category term="learn" scheme="http://thinkqob.github.io/tags/learn/"/>
+      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
     
-      <category term="python" scheme="http://thinkqob.github.io/tags/python/"/>
+      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
     
-      <category term="Python" scheme="http://thinkqob.github.io/categories/Python/"/>
+      <category term="Python" scheme="http://blog.lidongwei.com/categories/Python/"/>
     
   </entry>
   
