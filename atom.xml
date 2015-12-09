@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn Programming]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.lidongwei.com/"/>
-  <updated>2015-12-09T11:58:12.260Z</updated>
+  <updated>2015-12-09T09:38:46.974Z</updated>
   <id>http://blog.lidongwei.com/</id>
   
   <author>
@@ -13,6 +13,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Install Scrapy and Flask]]></title>
+    <link href="http://blog.lidongwei.com/2015/12/09/2222/"/>
+    <id>http://blog.lidongwei.com/2015/12/09/2222/</id>
+    <published>2015-12-09T12:54:14.670Z</published>
+    <updated>2015-12-09T09:38:46.974Z</updated>
+    <content type="html"><![CDATA[<p>安装python<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]$ sudo yum install <span class="keyword">python</span> <span class="keyword">python</span>-devel <span class="keyword">python</span>-setuptools <span class="keyword">python</span>-pip</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]$ sudo yum install <span class="keyword">python</span>-lxml <span class="keyword">python</span>-cffi</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]$ sudo pip install --upgrade pip</span><br></pre></td></tr></table></figure></p>
+<p>安装scrapy<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install libffi2 libffi-devel</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install openssl openssl-devel</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install libxml2 libxml2-devel</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install gcc</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo pip install scrapy</span><br></pre></td></tr></table></figure></p>
+<p>安装flask<br><code>[user@loaclhost ~]$ sudo pip install flask</code></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>安装python<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><b]]>
+    </summary>
+    
+      <category term="Linux" scheme="http://blog.lidongwei.com/tags/Linux/"/>
+    
+      <category term="Python" scheme="http://blog.lidongwei.com/tags/Python/"/>
+    
+      <category term="Python" scheme="http://blog.lidongwei.com/categories/Python/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Install LNMP on CentOS7]]></title>
