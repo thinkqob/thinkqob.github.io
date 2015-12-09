@@ -55,25 +55,19 @@
 
 
 
-<meta name="description" content="[root@loaclhost ~]$ sudo vi /etc/sudoers
-user    ALL=(ALL)       ALL
-[user@loaclhost ~]$ sudo yum update[user@loaclhost ~]$ sudo yum upgrade
-安装nginx[user@loaclhost ~]$ sudo yum install epel-release[us">
+<meta name="description" content="12345[root@loaclhost ~]$ sudo vi /etc/sudoersuser    ALL=(ALL)       ALL[user@loaclhost ~]$ sudo yum update[user@loaclhost ~]$ sudo yum upgrade
+安装nginx1234567891011121314151617181920212223242526272829">
 <meta property="og:type" content="article">
 <meta property="og:title" content="install LNMP">
-<meta property="og:url" content="http://thinkqob.github.io/2015/12/08/install-LNMP/index.html">
+<meta property="og:url" content="http://thinkqob.github.io/2015/12/09/install-LNMP/index.html">
 <meta property="og:site_name" content="thinkqob.github.io">
-<meta property="og:description" content="[root@loaclhost ~]$ sudo vi /etc/sudoers
-user    ALL=(ALL)       ALL
-[user@loaclhost ~]$ sudo yum update[user@loaclhost ~]$ sudo yum upgrade
-安装nginx[user@loaclhost ~]$ sudo yum install epel-release[us">
-<meta property="og:updated_time" content="2015-12-08T15:40:14.632Z">
+<meta property="og:description" content="12345[root@loaclhost ~]$ sudo vi /etc/sudoersuser    ALL=(ALL)       ALL[user@loaclhost ~]$ sudo yum update[user@loaclhost ~]$ sudo yum upgrade
+安装nginx1234567891011121314151617181920212223242526272829">
+<meta property="og:updated_time" content="2015-12-09T03:11:05.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="install LNMP">
-<meta name="twitter:description" content="[root@loaclhost ~]$ sudo vi /etc/sudoers
-user    ALL=(ALL)       ALL
-[user@loaclhost ~]$ sudo yum update[user@loaclhost ~]$ sudo yum upgrade
-安装nginx[user@loaclhost ~]$ sudo yum install epel-release[us">
+<meta name="twitter:description" content="12345[root@loaclhost ~]$ sudo vi /etc/sudoersuser    ALL=(ALL)       ALL[user@loaclhost ~]$ sudo yum update[user@loaclhost ~]$ sudo yum upgrade
+安装nginx1234567891011121314151617181920212223242526272829">
 
 
 
@@ -221,8 +215,8 @@ user    ALL=(ALL)       ALL
         <div class="post-meta">
           <span class="post-time">
             Posted on
-            <time itemprop="dateCreated" datetime="2015-12-08T23:40:14+08:00" content="2015-12-08">
-              2015-12-08
+            <time itemprop="dateCreated" datetime="2015-12-09T11:11:05+08:00" content="2015-12-09">
+              2015-12-09
             </time>
           </span>
 
@@ -260,49 +254,23 @@ user    ALL=(ALL)       ALL
       
 
       
-        <span itemprop="articleBody"><p><code>[root@loaclhost ~]$ sudo vi /etc/sudoers
-user    ALL=(ALL)       ALL</code></p>
-<p><code>[user@loaclhost ~]$ sudo yum update</code><br><code>[user@loaclhost ~]$ sudo yum upgrade</code></p>
-<p>安装nginx<br>[user@loaclhost ~]$ sudo yum install epel-release<br>[user@loaclhost ~]$ sudo yum install nginx<br>[user@loaclhost ~]$ sudo systemctl start nginx<br>[user@loaclhost ~]$ sudo systemctl enable nginx.service<br>[user@loaclhost ~]$ sudo systemctl reload nginx.service</p>
-<p>[user@loaclhost ~]$ sudo vi /etc/nginx/conf.d/user.conf</p>
-<p>server {<br>    listen       80;<br>    server_name  domainname.com;</p>
-<pre><code><span class="comment"># note that these lines are originally from the "location /" block</span>
-<span class="title">root</span>   /home/user/www;
-<span class="title">index</span> index.php index.html index.htm;
-
-<span class="title">location</span> / {
-    <span class="title">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ =<span class="number">404</span>;
-}
-<span class="title">error_page</span> <span class="number">404</span> /<span class="number">404</span>.html;
-<span class="title">error_page</span> <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span> /50x.html;
-<span class="title">location</span> = /50x.html {
-    <span class="title">root</span> /usr/share/nginx/html;
-}
-
-<span class="title">location</span> <span class="regexp">~ \.php$</span> {
-    <span class="title">try_files</span> <span class="variable">$uri</span> =<span class="number">404</span>;
-    <span class="title">fastcgi_split_path_info</span><span class="regexp"> ^(.+\.php)(/.+)$</span>;
-    <span class="title">fastcgi_pass</span> <span class="url">unix:/var/run/php-fpm/php-fpm.sock</span>;
-    <span class="title">fastcgi_index</span> index.php;
-    <span class="title">fastcgi_param</span> SCRIPT_FILENAME <span class="variable">$document_root</span><span class="variable">$fastcgi_script_name</span>;
-    <span class="title">include</span> fastcgi_params;
-}
-</code></pre><p>}</p>
-<p>安装php<br>[user@loaclhost ~]$ sudo yum install php php-mysql php-fpm<br>[user@loaclhost ~]$ sudo systemctl start php-fpm<br>[user@loaclhost ~]$ sudo systemctl enable php-fpm<br>[user@loaclhost ~]$ sudo vi /etc/php-fpm.d/www.conf<br>listen = /var/run/php-fpm/php-fpm.sock<br>listen.owner = nobody<br>listen.group = nobody<br>user = nginx<br>group = nginx</p>
-<p>新建用户<br>[user@loaclhost ~]$ sudo useradd -g nginx user2<br>[user@loaclhost ~]$ sudo chmod 750 /home/user2/www -R</p>
-<p>安装mysql数据库<br>[user@loaclhost ~]$ sudo yum install mariadb mariadb-server</p>
-<p>初始化设置mysql<br>[user@loaclhost ~]$ sudo mysql_secure_installation</p>
-<p>用root账号登陆mysql<br>[user@loaclhost ~]$ sudo mysql -u root -p</p>
-<p>创建数据库和用户<br>MariaDB [(none)]&gt; CREATE DATABASE database_name;<br>MariaDB [(none)]&gt; CREATE USER ‘user_name’@’localhost’ IDENTIFIED BY ‘password’;<br>MariaDB [(none)]&gt; GRANT ALL PRIVILEGES ON database_name.* TO ‘user_name’@’localhost’;<br>MariaDB [(none)]&gt; FLUSH PRIVILEGES;</p>
-<p>查看所有用户<br>MariaDB [(none)]&gt; MariaDB [(none)]&gt; SELECT user,host,user FROM mysql.user;</p>
-<p>参看所有数据库<br>MariaDB [(none)]&gt; SHOW DATABASES;</p>
-<p>参看所有表<br>MariaDB [(none)]&gt; USE database_name;<br>MariaDB [database_name]&gt; SHOW TABLES;</p>
-<p>退出<br>MariaDB [(none)]&gt; exit</p>
-<p>安装python<br>[user@loaclhost ~]$ sudo yum install python python-devel python-setuptools python-pip<br>[user@loaclhost ~]$ sudo yum install python-lxml python-cffi<br>[user@loaclhost ~]$ sudo pip install –upgrade pip</p>
-<p>安装scrapy<br>[user@loaclhost ~]$ sudo yum install libffi2 libffi-devel<br>[user@loaclhost ~]$ sudo yum install openssl openssl-devel<br>[user@loaclhost ~]$ sudo yum install libxml2 libxml2-devel<br>[user@loaclhost ~]$ sudo yum install gcc<br>[user@loaclhost ~]$ sudo pip install scrapy</p>
-<p>安装flask<br>[user@loaclhost ~]$ sudo pip install flask</p>
-<p>其他：<br>[user@loaclhost ~]$ sudo yum install vsftpd<br>[user@loaclhost ~]$ sudo systemctl start vsftpd<br>[user@loaclhost ~]$ sudo systemctl enable vsftpd.service<br>[user@loaclhost ~]$ sudo yum install lrzsz<br>[user@loaclhost ~]$ sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</p>
-<p>安装wordpress和自动更新<br>[user@loaclhost ~]$ wget <a href="http://wordpress.org/latest.tar.gz" target="_blank" rel="external">http://wordpress.org/latest.tar.gz</a>;<br>[user@loaclhost ~]$ chown -R nginx:nginx wp-content<br>[user@loaclhost ~]$ vi wp-config.php<br>添加<br>define(‘FS_METHOD’, ‘direct’);</p>
+        <span itemprop="articleBody"><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo vi /etc/sudoers</span><br><span class="line">user    <span class="constant">ALL</span>=(<span class="constant">ALL</span>)       <span class="constant">ALL</span></span><br><span class="line"></span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum update</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum upgrade</span><br></pre></td></tr></table></figure>
+<p>安装nginx<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">[user@loaclhost ~]$ sudo yum install epel-release</span><br><span class="line">[user@loaclhost ~]$ sudo yum install nginx</span><br><span class="line">[user@loaclhost ~]$ sudo systemctl <span class="keyword">start</span> nginx</span><br><span class="line">[user@loaclhost ~]$ sudo systemctl enable nginx.service</span><br><span class="line">[user@loaclhost ~]$ sudo systemctl reload nginx.service</span><br><span class="line"></span><br><span class="line">[user@loaclhost ~]$ sudo vi /etc/nginx/conf.d/user.conf</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen       <span class="number">80</span>;</span><br><span class="line">    server_name  domainname.com;</span><br><span class="line"></span><br><span class="line">    # note that these lines are originally from the <span class="string">"location /"</span> block</span><br><span class="line">    root   /home/user/www;</span><br><span class="line">    index index.php index.html index.htm;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ =<span class="number">404</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    error_page <span class="number">404</span> /<span class="number">404</span>.html;</span><br><span class="line">    error_page <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span> /<span class="number">50</span>x.html;</span><br><span class="line">    location = /<span class="number">50</span>x.html &#123;</span><br><span class="line">        root /usr/share/nginx/html;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location ~ \.php$ &#123;</span><br><span class="line">        try_files <span class="variable">$uri</span> =<span class="number">404</span>;</span><br><span class="line">        fastcgi_split_path_info ^(.+\.php)(/.+)$;</span><br><span class="line">        fastcgi_pass unix:/var/run/php-fpm/php-fpm.sock;</span><br><span class="line">        fastcgi_index index.php;</span><br><span class="line">        fastcgi_param SCRIPT_FILENAME <span class="variable">$document</span>_root<span class="variable">$fastcgi</span>_script_name;</span><br><span class="line">        include fastcgi_params;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>安装php<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[user@loaclhost ~]$ sudo yum <span class="operator"><span class="keyword">install</span> php php-mysql php-fpm</span><br><span class="line">[<span class="keyword">user</span>@loaclhost ~]$ sudo systemctl <span class="keyword">start</span> php-fpm</span><br><span class="line">[<span class="keyword">user</span>@loaclhost ~]$ sudo systemctl <span class="keyword">enable</span> php-fpm</span><br><span class="line">[<span class="keyword">user</span>@loaclhost ~]$ sudo vi /etc/php-fpm.<span class="keyword">d</span>/www.conf</span><br><span class="line">listen = /<span class="keyword">var</span>/run/php-fpm/php-fpm.sock</span><br><span class="line">listen.owner = nobody</span><br><span class="line">listen.<span class="keyword">group</span> = nobody</span><br><span class="line"><span class="keyword">user</span> = nginx</span><br><span class="line"><span class="keyword">group</span> = nginx</span></span><br></pre></td></tr></table></figure></p>
+<p>新建用户<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo useradd -g nginx user2</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo chmod <span class="number">750</span> /home/user2/www -<span class="constant">R</span></span><br></pre></td></tr></table></figure></p>
+<p>安装mysql数据库<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install mariadb mariadb-server</span><br></pre></td></tr></table></figure></p>
+<p>初始化设置mysql<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo mysql_secure_installation</span><br></pre></td></tr></table></figure></p>
+<p>用root账号登陆mysql<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo mysql -u root -p</span><br></pre></td></tr></table></figure></p>
+<p>创建数据库和用户<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">MariaDB</span> [(<span class="built_in">none</span>)]&gt; CREATE DATABASE database_name;</span><br><span class="line"><span class="title">MariaDB</span> [(<span class="built_in">none</span>)]&gt; CREATE USER <span class="string">'user_name'</span>@<span class="string">'localhost'</span> IDENTIFIED BY <span class="string">'password'</span>;</span><br><span class="line"><span class="title">MariaDB</span> [(<span class="built_in">none</span>)]&gt; GRANT ALL PRIVILEGES ON database_<span class="regexp">name.*</span> TO <span class="string">'user_name'</span>@<span class="string">'localhost'</span>;</span><br><span class="line"><span class="title">MariaDB</span> [(<span class="built_in">none</span>)]&gt; FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure></p>
+<p>查看所有用户<br><figure class="highlight nsis"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [(<span class="literal">none</span>)]&gt; MariaDB [(<span class="literal">none</span>)]&gt; SELECT <span class="literal">user</span>,host,<span class="literal">user</span> FROM mysql.<span class="literal">user</span><span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
+<p>参看所有数据库<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">MariaDB</span> [(<span class="built_in">none</span>)]&gt; SHOW DATABASES;</span><br></pre></td></tr></table></figure></p>
+<p>参看所有表<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">MariaDB</span> [(<span class="built_in">none</span>)]&gt; USE database_name;</span><br><span class="line"><span class="title">MariaDB</span> [database_name]&gt; SHOW TABLES;</span><br></pre></td></tr></table></figure></p>
+<p>退出<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [(<span class="type">none</span>)]&gt; <span class="keyword">exit</span></span><br></pre></td></tr></table></figure></p>
+<p>安装python<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]$ sudo yum install <span class="keyword">python</span> <span class="keyword">python</span>-devel <span class="keyword">python</span>-setuptools <span class="keyword">python</span>-pip</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]$ sudo yum install <span class="keyword">python</span>-lxml <span class="keyword">python</span>-cffi</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]$ sudo pip install --upgrade pip</span><br></pre></td></tr></table></figure></p>
+<p>安装scrapy<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install libffi2 libffi-devel</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install openssl openssl-devel</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install libxml2 libxml2-devel</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install gcc</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo pip install scrapy</span><br></pre></td></tr></table></figure></p>
+<p>安装flask<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo pip install flask</span><br></pre></td></tr></table></figure></p>
+<p>其他：<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install vsftpd</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo systemctl start vsftpd</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo systemctl enable vsftpd.service</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install lrzsz</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo cp /usr/share/zoneinfo/<span class="constant">Asia</span>/<span class="constant">Shanghai</span> /etc/localtime</span><br></pre></td></tr></table></figure></p>
+<p>安装wordpress和自动更新<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>wget <span class="symbol">http:</span>/<span class="regexp">/wordpress.org/latest</span>.tar.gz;</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>chown -<span class="constant">R </span><span class="symbol">nginx:</span>nginx wp-content</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>vi wp-config.php</span><br><span class="line">添加</span><br><span class="line">define(<span class="string">'FS_METHOD'</span>, <span class="string">'direct'</span>);</span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
