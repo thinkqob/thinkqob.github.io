@@ -2,8 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://thinkqob.github.io/2015/12/09/8%20Install%20Scrapy%20and%20Flask/</loc>
+    <lastmod>2015-12-09T09:32:31.811Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://thinkqob.github.io/2015/12/09/7%20Install%20LNMP%20on%20CentOS7/</loc>
-    <lastmod>2015-12-09T09:19:30.237Z</lastmod>
+    <lastmod>2015-12-09T09:31:27.240Z</lastmod>
   </url>
   
   <url>
