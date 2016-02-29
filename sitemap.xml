@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.lidongwei.com/2016/02/29/Leran%20Flask%2002/</loc>
+    <lastmod>2016-02-29T13:11:04.174Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blog.lidongwei.com/2016/01/10/Leran%20Flask/</loc>
     <lastmod>2016-01-10T07:03:24.528Z</lastmod>
   </url>

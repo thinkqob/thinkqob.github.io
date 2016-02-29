@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn Programming]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.lidongwei.com/"/>
-  <updated>2016-01-10T07:03:24.528Z</updated>
+  <updated>2016-02-29T13:11:04.174Z</updated>
   <id>http://blog.lidongwei.com/</id>
   
   <author>
@@ -13,6 +13,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Leran Flask 02]]></title>
+    <link href="http://blog.lidongwei.com/2016/02/29/Leran%20Flask%2002/"/>
+    <id>http://blog.lidongwei.com/2016/02/29/Leran Flask 02/</id>
+    <published>2016-02-29T13:11:04.174Z</published>
+    <updated>2016-02-29T13:11:04.174Z</updated>
+    <content type="html"><![CDATA[<p>年前到现在停了一段时间没学，想着年后抓紧时间学起来，等到现在都快要三月了才认真起来。</p>
+<p>搁置太久感觉太多东西都忘记了，要重新复习一下知道怎么回事，还是用的少没记住不熟练。之前一直在跟着The Flask Mega-Tutorial学Flash，结果这个Tutorial在教用户验证的时候用的是OpenID，现在都没有什么公司支持了，搞得好烦.看到Part VI: Profile Page And Avatars不打算看了，准备去看这个作者的书<flask web="" development="">，从头撸一遍，顺便也复习一下之前学过的东西。</flask></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>年前到现在停了一段时间没学，想着年后抓紧时间学起来，等到现在都快要三月了才认真起来。</p>
+<p>搁置太久感觉太多东西都忘记了，要重新复习一下知道怎么回事，还是用的少没记住不熟练。之前一直在跟着The Flask Mega-Tutorial学Flash，结果这个Tutor]]>
+    </summary>
+    
+      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
+    
+      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
+    
+      <category term="Python" scheme="http://blog.lidongwei.com/categories/Python/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Leran Flask]]></title>
