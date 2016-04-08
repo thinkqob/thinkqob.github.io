@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn Programming]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.lidongwei.com/"/>
-  <updated>2016-02-29T13:11:04.174Z</updated>
+  <updated>2016-04-08T15:56:17.495Z</updated>
   <id>http://blog.lidongwei.com/</id>
   
   <author>
@@ -13,6 +13,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Flask Web Development 第八章]]></title>
+    <link href="http://blog.lidongwei.com/2016/04/08/Flask%20Web%20Development%208/"/>
+    <id>http://blog.lidongwei.com/2016/04/08/Flask Web Development 8/</id>
+    <published>2016-04-08T15:56:17.495Z</published>
+    <updated>2016-04-08T15:56:17.495Z</updated>
+    <content type="html"><![CDATA[<p>最近工作忙也没时间认真学了，最近这两天调整心态专心看了几个小时。Flask.Web.Development看到第八章了，看的还是云里雾里的，各种扩展包什么的也是迷糊。今天查了好多bug出来才把页面弄得能打开。多数bug都是大小写和空格的位置，还好有作者的代码可以比对，不然真的是难以debug。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近工作忙也没时间认真学了，最近这两天调整心态专心看了几个小时。Flask.Web.Development看到第八章了，看的还是云里雾里的，各种扩展包什么的也是迷糊。今天查了好多bug出来才把页面弄得能打开。多数bug都是大小写和空格的位置，还好有作者的代码可以比对，不然真]]>
+    </summary>
+    
+      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
+    
+      <category term="python，Flask" scheme="http://blog.lidongwei.com/tags/python%EF%BC%8CFlask/"/>
+    
+      <category term="Python" scheme="http://blog.lidongwei.com/categories/Python/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Leran Flask 02]]></title>
@@ -84,6 +104,28 @@
   </entry>
   
   <entry>
+    <title><![CDATA[Install Scrapy and Flask]]></title>
+    <link href="http://blog.lidongwei.com/2015/12/27/Install%20Scrapy%20and%20Flask/"/>
+    <id>http://blog.lidongwei.com/2015/12/27/Install Scrapy and Flask/</id>
+    <published>2015-12-26T17:36:51.926Z</published>
+    <updated>2015-12-09T09:38:46.974Z</updated>
+    <content type="html"><![CDATA[<p>安装python<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]$ sudo yum install <span class="keyword">python</span> <span class="keyword">python</span>-devel <span class="keyword">python</span>-setuptools <span class="keyword">python</span>-pip</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]$ sudo yum install <span class="keyword">python</span>-lxml <span class="keyword">python</span>-cffi</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]$ sudo pip install --upgrade pip</span><br></pre></td></tr></table></figure></p>
+<p>安装scrapy<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install libffi2 libffi-devel</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install openssl openssl-devel</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install libxml2 libxml2-devel</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install gcc</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo pip install scrapy</span><br></pre></td></tr></table></figure></p>
+<p>安装flask<br><code>[user@loaclhost ~]$ sudo pip install flask</code></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>安装python<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><b]]>
+    </summary>
+    
+      <category term="Linux" scheme="http://blog.lidongwei.com/tags/Linux/"/>
+    
+      <category term="Python" scheme="http://blog.lidongwei.com/tags/Python/"/>
+    
+      <category term="Python" scheme="http://blog.lidongwei.com/categories/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Learn-Python-0000]]></title>
     <link href="http://blog.lidongwei.com/2015/12/27/learn-python-0000/"/>
     <id>http://blog.lidongwei.com/2015/12/27/learn-python-0000/</id>
@@ -106,24 +148,23 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Install Scrapy and Flask]]></title>
-    <link href="http://blog.lidongwei.com/2015/12/27/Install%20Scrapy%20and%20Flask/"/>
-    <id>http://blog.lidongwei.com/2015/12/27/Install Scrapy and Flask/</id>
-    <published>2015-12-26T17:36:51.926Z</published>
-    <updated>2015-12-09T09:38:46.974Z</updated>
-    <content type="html"><![CDATA[<p>安装python<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]$ sudo yum install <span class="keyword">python</span> <span class="keyword">python</span>-devel <span class="keyword">python</span>-setuptools <span class="keyword">python</span>-pip</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]$ sudo yum install <span class="keyword">python</span>-lxml <span class="keyword">python</span>-cffi</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]$ sudo pip install --upgrade pip</span><br></pre></td></tr></table></figure></p>
-<p>安装scrapy<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install libffi2 libffi-devel</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install openssl openssl-devel</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install libxml2 libxml2-devel</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install gcc</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo pip install scrapy</span><br></pre></td></tr></table></figure></p>
-<p>安装flask<br><code>[user@loaclhost ~]$ sudo pip install flask</code></p>
+    <title><![CDATA[CSforALL-7]]></title>
+    <link href="http://blog.lidongwei.com/2015/12/27/CSforALL-7/"/>
+    <id>http://blog.lidongwei.com/2015/12/27/CSforALL-7/</id>
+    <published>2015-12-26T17:36:51.925Z</published>
+    <updated>2015-12-09T09:17:34.443Z</updated>
+    <content type="html"><![CDATA[<p>第七章讲的是计算机上的三种问题，简单的，困难的，和不可能的。看了一半并看不懂。遇到好多不认识的单词和数学公式和名词，单词查了之后也不能理解他真正的意思，暂时不看了。这章更多的是在讲计算机理论，这个虽然很重要但是在学好python之前可以放一下，回过头来再重新看CSforALL。昨天又翻了一下learn python the hard way，发现除了和CSforALL重复的地方之外，其他的都忘记了。还是回去再快速的看一遍lpthw吧，Python核心编程涵盖的很全面也有点啰嗦，不过后面几章网络编程什么的还没有见过，应该可以看看的。</p>
+<p>总之现在的目标就是学好python为主，补充CS的知识为辅。先这么做，不对再调整。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>安装python<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><b]]>
+    <![CDATA[<p>第七章讲的是计算机上的三种问题，简单的，困难的，和不可能的。看了一半并看不懂。遇到好多不认识的单词和数学公式和名词，单词查了之后也不能理解他真正的意思，暂时不看了。这章更多的是在讲计算机理论，这个虽然很重要但是在学好python之前可以放一下，回过头来再重新看CSforAL]]>
     </summary>
     
-      <category term="Linux" scheme="http://blog.lidongwei.com/tags/Linux/"/>
+      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
     
-      <category term="Python" scheme="http://blog.lidongwei.com/tags/Python/"/>
+      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
     
-      <category term="Python" scheme="http://blog.lidongwei.com/categories/Python/"/>
+      <category term="CSforALL" scheme="http://blog.lidongwei.com/categories/CSforALL/"/>
     
   </entry>
   
@@ -156,27 +197,6 @@
       <category term="Linux" scheme="http://blog.lidongwei.com/tags/Linux/"/>
     
       <category term="Linux" scheme="http://blog.lidongwei.com/categories/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[CSforALL-7]]></title>
-    <link href="http://blog.lidongwei.com/2015/12/27/CSforALL-7/"/>
-    <id>http://blog.lidongwei.com/2015/12/27/CSforALL-7/</id>
-    <published>2015-12-26T17:36:51.925Z</published>
-    <updated>2015-12-09T09:17:34.443Z</updated>
-    <content type="html"><![CDATA[<p>第七章讲的是计算机上的三种问题，简单的，困难的，和不可能的。看了一半并看不懂。遇到好多不认识的单词和数学公式和名词，单词查了之后也不能理解他真正的意思，暂时不看了。这章更多的是在讲计算机理论，这个虽然很重要但是在学好python之前可以放一下，回过头来再重新看CSforALL。昨天又翻了一下learn python the hard way，发现除了和CSforALL重复的地方之外，其他的都忘记了。还是回去再快速的看一遍lpthw吧，Python核心编程涵盖的很全面也有点啰嗦，不过后面几章网络编程什么的还没有见过，应该可以看看的。</p>
-<p>总之现在的目标就是学好python为主，补充CS的知识为辅。先这么做，不对再调整。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>第七章讲的是计算机上的三种问题，简单的，困难的，和不可能的。看了一半并看不懂。遇到好多不认识的单词和数学公式和名词，单词查了之后也不能理解他真正的意思，暂时不看了。这章更多的是在讲计算机理论，这个虽然很重要但是在学好python之前可以放一下，回过头来再重新看CSforAL]]>
-    </summary>
-    
-      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
-    
-      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
-    
-      <category term="CSforALL" scheme="http://blog.lidongwei.com/categories/CSforALL/"/>
     
   </entry>
   
