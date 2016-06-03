@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn Programming]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.lidongwei.com/"/>
-  <updated>2016-06-03T04:16:05.596Z</updated>
+  <updated>2016-06-03T04:17:50.704Z</updated>
   <id>http://blog.lidongwei.com/</id>
   
   <author>
@@ -15,20 +15,18 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[The Next]]></title>
-    <link href="http://blog.lidongwei.com/2016/06/03/The%20Next/"/>
-    <id>http://blog.lidongwei.com/2016/06/03/The Next/</id>
-    <published>2016-06-03T04:16:05.596Z</published>
-    <updated>2016-06-03T04:16:05.596Z</updated>
-    <content type="html"><![CDATA[<p>####学习方向：</p>
-<h5 id="一，爬虫：">一，爬虫：</h5><p>urllib, urllib2, Scrapy</p>
+    <title><![CDATA[The Future]]></title>
+    <link href="http://blog.lidongwei.com/2016/06/03/The%20Future/"/>
+    <id>http://blog.lidongwei.com/2016/06/03/The Future/</id>
+    <published>2016-06-03T04:18:27.562Z</published>
+    <updated>2016-06-03T04:17:50.704Z</updated>
+    <content type="html"><![CDATA[<h4 id="学习方向：">学习方向：</h4><h5 id="一，爬虫：">一，爬虫：</h5><p>urllib, urllib2, Scrapy</p>
 <h5 id="二，数据分析：">二，数据分析：</h5><p>NumPy, pandas, matplotlib, IPython</p>
 <h5 id="三，web：">三，web：</h5><p>Flask</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>####学习方向：</p>
-<h5 id="一，爬虫：">一，爬虫：</h5><p>urllib, urllib2, Scrapy</p>
-<h5 id="二，数据分析：">二，数据分析：</h5><p>NumPy, pandas, matplotlib, IPython<]]>
+    <![CDATA[<h4 id="学习方向：">学习方向：</h4><h5 id="一，爬虫：">一，爬虫：</h5><p>urllib, urllib2, Scrapy</p>
+<h5 id="二，数据分析：">二，数据分析：</h5><p>NumPy, pandas, matplotlib, ]]>
     </summary>
     
       <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
