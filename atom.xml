@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn Programming]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.lidongwei.com/"/>
-  <updated>2016-06-03T04:10:23.835Z</updated>
+  <updated>2016-06-03T04:16:05.596Z</updated>
   <id>http://blog.lidongwei.com/</id>
   
   <author>
@@ -18,18 +18,17 @@
     <title><![CDATA[The Next]]></title>
     <link href="http://blog.lidongwei.com/2016/06/03/The%20Next/"/>
     <id>http://blog.lidongwei.com/2016/06/03/The Next/</id>
-    <published>2016-06-03T04:10:23.884Z</published>
-    <updated>2016-06-03T04:10:23.835Z</updated>
+    <published>2016-06-03T04:16:05.596Z</published>
+    <updated>2016-06-03T04:16:05.596Z</updated>
     <content type="html"><![CDATA[<p>####学习方向：</p>
-<p>#####一，爬虫：<br>urllib, urllib2, Scrapy</p>
-<p>#####二，数据分析：<br>NumPy, pandas, matplotlib, IPython</p>
-<p>#####三，web：<br>Flask</p>
+<h5 id="一，爬虫：">一，爬虫：</h5><p>urllib, urllib2, Scrapy</p>
+<h5 id="二，数据分析：">二，数据分析：</h5><p>NumPy, pandas, matplotlib, IPython</p>
+<h5 id="三，web：">三，web：</h5><p>Flask</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>####学习方向：</p>
-<p>#####一，爬虫：<br>urllib, urllib2, Scrapy</p>
-<p>#####二，数据分析：<br>NumPy, pandas, matplotlib, IPython</p>
-<p>#####三，web：<br>Fl]]>
+<h5 id="一，爬虫：">一，爬虫：</h5><p>urllib, urllib2, Scrapy</p>
+<h5 id="二，数据分析：">二，数据分析：</h5><p>NumPy, pandas, matplotlib, IPython<]]>
     </summary>
     
       <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
