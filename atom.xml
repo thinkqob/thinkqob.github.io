@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn Programming]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.lidongwei.com/"/>
-  <updated>2016-06-03T04:17:50.704Z</updated>
+  <updated>2016-08-23T14:15:25.433Z</updated>
   <id>http://blog.lidongwei.com/</id>
   
   <author>
@@ -13,6 +13,66 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Install SaltStack on CentOS 7]]></title>
+    <link href="http://blog.lidongwei.com/2016/08/23/Install%20SaltStack%20on%20CentOS%207/"/>
+    <id>http://blog.lidongwei.com/2016/08/23/Install SaltStack on CentOS 7/</id>
+    <published>2016-08-23T14:15:25.433Z</published>
+    <updated>2016-08-23T14:15:25.433Z</updated>
+    <content type="html"><![CDATA[<p>[Minion:]<br>‘’’<br>[root@Minion ~]# sudo yum install <a href="https://repo.saltstack.com/yum/redhat/salt-repo-latest-1.el7.noarch.rpm" target="_blank" rel="external">https://repo.saltstack.com/yum/redhat/salt-repo-latest-1.el7.noarch.rpm</a><br>[root@Minion ~]# sudo yum clean expire-cache<br>[root@Minion ~]# sudo yum install salt-minion<br>[root@Minion ~]# sudo vi/etc/salt/minion</p>
+<p>master: master<br>hash_type: sha256</p>
+<p>[root@Master ~]# sudo systemctl start salt-master.service<br>[root@Master ~]# sudo systemctl enable salt-master.service<br>‘’’</p>
+<p>[Master:]<br>‘’’<br>[root@Master ~]# sudo yum install <a href="https://repo.saltstack.com/yum/redhat/salt-repo-latest-1.el7.noarch.rpm" target="_blank" rel="external">https://repo.saltstack.com/yum/redhat/salt-repo-latest-1.el7.noarch.rpm</a><br>[root@Master ~]# sudo yum clean expire-cache<br>[root@Master ~]# sudo yum install salt-master</p>
+<p>[root@Master ~]# sudo vi/etc/salt/master</p>
+<p>interface: 0.0.0.0<br>hash_type: sha256</p>
+<p>[root@Master ~]# sudo systemctl start salt-master.service<br>[root@Master ~]# sudo systemctl enable salt-master.service</p>
+<p>[root@Master ~]# sudo firewall-cmd –get-active-zones<br>[root@Master ~]# sudo firewall-cmd –permanent –zone=public –add-port=4505-4506/tcp<br>[root@Master ~]# sudo firewall-cmd –reload<br>‘’’<br>‘’’<br>[root@Master ~]# salt-key -L<br>Accepted Keys:<br>Denied Keys:<br>Unaccepted Keys:<br>Minion<br>Rejected Keys:<br>[root@Master ~]# salt-key -a Minion<br>The following keys are going to be accepted:<br>Unaccepted Keys:<br>Minion<br>Proceed? [n/Y] y<br>[root@Master ~]# salt-key -L<br>Accepted Keys:<br>Minion<br>Denied Keys:<br>Unaccepted Keys:<br>Rejected Keys:<br>[root@Master ~]# salt Minion test.ping<br>Minion:<br>    True<br>[root@Master ~]# salt Minion cmd.run “pwd”<br>Minion:<br>    /root<br>‘’’</p>
+<p>[else:]<br>‘’’<br>sudo yum install salt-master<br>sudo yum install salt-minion<br>sudo yum install salt-ssh<br>sudo yum install salt-syndic<br>sudo yum install salt-cloud<br>sudo yum install salt-api<br>salt-key -L  # list all the keys<br>salt-key -a <key>  # accept key<br>salt-key -d <key>  # delete key<br>salt-key -A  # accept all the keys<br>salt-key -D  # delete all the keys<br>salt-key -R  # reject all pending keys<br>‘’’</key></key></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>[Minion:]<br>‘’’<br>[root@Minion ~]# sudo yum install <a href="https://repo.saltstack.com/yum/redhat/salt-repo-latest-1.el7.noarch.rpm" t]]>
+    </summary>
+    
+      <category term="Python" scheme="http://blog.lidongwei.com/tags/Python/"/>
+    
+      <category term="SaltStack" scheme="http://blog.lidongwei.com/tags/SaltStack/"/>
+    
+      <category term="SaltStack" scheme="http://blog.lidongwei.com/categories/SaltStack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Install LNMP on CentOS 7]]></title>
+    <link href="http://blog.lidongwei.com/2016/08/23/Install%20LNMP%20on%20CentOS%207/"/>
+    <id>http://blog.lidongwei.com/2016/08/23/Install LNMP on CentOS 7/</id>
+    <published>2016-08-23T14:13:36.349Z</published>
+    <updated>2016-08-23T14:13:24.572Z</updated>
+    <content type="html"><![CDATA[<p>安装nginx<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">[user@loaclhost ~]$ sudo yum <span class="keyword">update</span></span><br><span class="line">[user@loaclhost ~]$ sudo yum upgrade</span><br><span class="line">[user@loaclhost ~]$ sudo yum install epel-release</span><br><span class="line">[user@loaclhost ~]$ sudo yum install nginx</span><br><span class="line">[user@loaclhost ~]$ sudo systemctl <span class="keyword">start</span> nginx</span><br><span class="line">[user@loaclhost ~]$ sudo systemctl enable nginx.service</span><br><span class="line">[user@loaclhost ~]$ sudo systemctl reload nginx.service</span><br><span class="line"></span><br><span class="line">[user@loaclhost ~]$ sudo vi /etc/nginx/conf.d/user.conf</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen       <span class="number">80</span>;</span><br><span class="line">    server_name  domainname.com;</span><br><span class="line"></span><br><span class="line">    # note that these lines are originally from the <span class="string">"location /"</span> block</span><br><span class="line">    root   /home/user/www;</span><br><span class="line">    index index.php index.html index.htm;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ =<span class="number">404</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    error_page <span class="number">404</span> /<span class="number">404</span>.html;</span><br><span class="line">    error_page <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span> /<span class="number">50</span>x.html;</span><br><span class="line">    location = /<span class="number">50</span>x.html &#123;</span><br><span class="line">        root /usr/share/nginx/html;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location ~ \.php$ &#123;</span><br><span class="line">        try_files <span class="variable">$uri</span> =<span class="number">404</span>;</span><br><span class="line">        fastcgi_split_path_info ^(.+\.php)(/.+)$;</span><br><span class="line">        fastcgi_pass unix:/var/run/php-fpm/php-fpm.sock;</span><br><span class="line">        fastcgi_index index.php;</span><br><span class="line">        fastcgi_param SCRIPT_FILENAME <span class="variable">$document</span>_root<span class="variable">$fastcgi</span>_script_name;</span><br><span class="line">        include fastcgi_params;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>安装php<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[user@loaclhost ~]$ sudo yum <span class="operator"><span class="keyword">install</span> php php-mysql php-fpm</span><br><span class="line">[<span class="keyword">user</span>@loaclhost ~]$ sudo systemctl <span class="keyword">start</span> php-fpm</span><br><span class="line">[<span class="keyword">user</span>@loaclhost ~]$ sudo systemctl <span class="keyword">enable</span> php-fpm</span><br><span class="line">[<span class="keyword">user</span>@loaclhost ~]$ sudo vi /etc/php-fpm.<span class="keyword">d</span>/www.conf</span><br><span class="line">listen = /<span class="keyword">var</span>/run/php-fpm/php-fpm.sock</span><br><span class="line">listen.owner = nobody</span><br><span class="line">listen.<span class="keyword">group</span> = nobody</span><br><span class="line"><span class="keyword">user</span> = nginx</span><br><span class="line"><span class="keyword">group</span> = nginx</span></span><br></pre></td></tr></table></figure></p>
+<p>新建用户<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo useradd -g nginx user2</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo chmod <span class="number">750</span> /home/user2/www -<span class="constant">R</span></span><br></pre></td></tr></table></figure></p>
+<p>安装mysql数据库<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install mariadb mariadb-server</span><br></pre></td></tr></table></figure></p>
+<p>初始化设置mysql<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo mysql_secure_installation</span><br></pre></td></tr></table></figure></p>
+<p>用root账号登陆mysql<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo mysql -u root -p</span><br></pre></td></tr></table></figure></p>
+<p>创建数据库和用户<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">MariaDB</span> [(<span class="built_in">none</span>)]&gt; CREATE DATABASE database_name;</span><br><span class="line"><span class="title">MariaDB</span> [(<span class="built_in">none</span>)]&gt; CREATE USER <span class="string">'user_name'</span>@<span class="string">'localhost'</span> IDENTIFIED BY <span class="string">'password'</span>;</span><br><span class="line"><span class="title">MariaDB</span> [(<span class="built_in">none</span>)]&gt; GRANT ALL PRIVILEGES ON database_<span class="regexp">name.*</span> TO <span class="string">'user_name'</span>@<span class="string">'localhost'</span>;</span><br><span class="line"><span class="title">MariaDB</span> [(<span class="built_in">none</span>)]&gt; FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure></p>
+<p>查看所有用户<br><figure class="highlight nsis"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [(<span class="literal">none</span>)]&gt; MariaDB [(<span class="literal">none</span>)]&gt; SELECT <span class="literal">user</span>,host,<span class="literal">user</span> FROM mysql.<span class="literal">user</span><span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
+<p>参看所有数据库<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">MariaDB</span> [(<span class="built_in">none</span>)]&gt; SHOW DATABASES;</span><br></pre></td></tr></table></figure></p>
+<p>参看所有表<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">MariaDB</span> [(<span class="built_in">none</span>)]&gt; USE database_name;</span><br><span class="line"><span class="title">MariaDB</span> [database_name]&gt; SHOW TABLES;</span><br></pre></td></tr></table></figure></p>
+<p>退出<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [(<span class="type">none</span>)]&gt; <span class="keyword">exit</span></span><br></pre></td></tr></table></figure></p>
+<p>安装wordpress和自动更新<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>wget <span class="symbol">http:</span>/<span class="regexp">/wordpress.org/latest</span>.tar.gz;</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>chown -<span class="constant">R </span><span class="symbol">nginx:</span>nginx wp-content</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>vi wp-config.php</span><br><span class="line">添加</span><br><span class="line">define(<span class="string">'FS_METHOD'</span>, <span class="string">'direct'</span>);</span><br></pre></td></tr></table></figure></p>
+<p>其他：<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>vi /etc/sudoers</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install vsftpd</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo systemctl start vsftpd</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo systemctl enable vsftpd.service</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install lrzsz</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo cp /usr/share/zoneinfo/<span class="constant">Asia</span>/<span class="constant">Shanghai</span> /etc/localtime</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>安装nginx<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span>]]>
+    </summary>
+    
+      <category term="LNMP" scheme="http://blog.lidongwei.com/tags/LNMP/"/>
+    
+      <category term="Linux" scheme="http://blog.lidongwei.com/tags/Linux/"/>
+    
+      <category term="Linux" scheme="http://blog.lidongwei.com/categories/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[The Future]]></title>
@@ -39,9 +99,9 @@
   
   <entry>
     <title><![CDATA[Flask Web Development 第八章]]></title>
-    <link href="http://blog.lidongwei.com/2016/04/08/Flask%20Web%20Development%208/"/>
-    <id>http://blog.lidongwei.com/2016/04/08/Flask Web Development 8/</id>
-    <published>2016-04-08T15:56:17.495Z</published>
+    <link href="http://blog.lidongwei.com/2016/05/08/Flask%20Web%20Development%208/"/>
+    <id>http://blog.lidongwei.com/2016/05/08/Flask Web Development 8/</id>
+    <published>2016-05-08T06:18:44.753Z</published>
     <updated>2016-04-08T15:56:17.495Z</updated>
     <content type="html"><![CDATA[<p>最近工作忙也没时间认真学了，最近这两天调整心态专心看了几个小时。Flask.Web.Development看到第八章了，看的还是云里雾里的，各种扩展包什么的也是迷糊。今天查了好多bug出来才把页面弄得能打开。多数bug都是大小写和空格的位置，还好有作者的代码可以比对，不然真的是难以debug。</p>
 ]]></content>
@@ -59,9 +119,9 @@
   
   <entry>
     <title><![CDATA[Leran Flask 02]]></title>
-    <link href="http://blog.lidongwei.com/2016/02/29/Leran%20Flask%2002/"/>
-    <id>http://blog.lidongwei.com/2016/02/29/Leran Flask 02/</id>
-    <published>2016-02-29T13:11:04.174Z</published>
+    <link href="http://blog.lidongwei.com/2016/04/04/Leran%20Flask%2002/"/>
+    <id>http://blog.lidongwei.com/2016/04/04/Leran Flask 02/</id>
+    <published>2016-04-04T15:13:50.362Z</published>
     <updated>2016-02-29T13:11:04.174Z</updated>
     <content type="html"><![CDATA[<p>年前到现在停了一段时间没学，想着年后抓紧时间学起来，等到现在都快要三月了才认真起来。</p>
 <p>搁置太久感觉太多东西都忘记了，要重新复习一下知道怎么回事，还是用的少没记住不熟练。之前一直在跟着The Flask Mega-Tutorial学Flash，结果这个Tutorial在教用户验证的时候用的是OpenID，现在都没有什么公司支持了，搞得好烦.看到Part VI: Profile Page And Avatars不打算看了，准备去看这个作者的书<flask web="" development="">，从头撸一遍，顺便也复习一下之前学过的东西。</flask></p>
@@ -81,9 +141,9 @@
   
   <entry>
     <title><![CDATA[Leran Flask]]></title>
-    <link href="http://blog.lidongwei.com/2016/01/10/Leran%20Flask/"/>
-    <id>http://blog.lidongwei.com/2016/01/10/Leran Flask/</id>
-    <published>2016-01-10T07:03:24.528Z</published>
+    <link href="http://blog.lidongwei.com/2016/01/19/Leran%20Flask/"/>
+    <id>http://blog.lidongwei.com/2016/01/19/Leran Flask/</id>
+    <published>2016-01-18T16:12:19.815Z</published>
     <updated>2016-01-10T07:03:24.528Z</updated>
     <content type="html"><![CDATA[<p>上个月感冒，休息了一段时间，没有精力学python了。最近两周捡起来继续学，看了看《python核心编程》，看到第六章，看起来并不费劲，好多东西之前都有学过，所以看的比较快。书中的代码排版太烂了。</p>
 <p>看《python核心编程》的同时开始学Flask，按照官方的Flask Tutorial看了看，感觉好多东西讲的都太跳跃和深奥，对于我这个初学者来说写个“Hello World”之后就看不懂了。然后搜到另一本书The Flask Mega-Tutorial，找了中文版看了三章，跟着教程一步一步做还能写出个页面来，继续学完这本书吧。中间不懂得概念Google一下，有空还要学学HTML相关的东西。为了逼自己学英语准备看英文版的，可能没有中文版那么直接，但是啃一啃还是没问题的。争取按照教程把ShootingBlog搭建起来。</p>
@@ -127,28 +187,6 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Learn-Python-0000]]></title>
-    <link href="http://blog.lidongwei.com/2015/12/27/learn-python-0000/"/>
-    <id>http://blog.lidongwei.com/2015/12/27/learn-python-0000/</id>
-    <published>2015-12-26T17:36:51.926Z</published>
-    <updated>2015-12-09T09:17:38.819Z</updated>
-    <content type="html"><![CDATA[<p>看完了 <a href="http://learnpythonthehardway.org/book/" target="_blank" rel="external">learn python the hard way</a> ,感觉什么也没学会，学到的都是片段，还没办法解决问题。对于CS知道的太少了，需要找门CS的课程来学习学习。<br>然后开始看 <a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 目前看到第三章，就已经补充RSA加密和质数、求导、微积分等这些早就丢给老师的东西了。因为都是英文的，我英文又一般，一章大概要看两遍才能完全理解，还是要抓紧时间看。为了能解决问题还有好多东西要学，不过学起来也蛮开心的，就是总是要跟自己的懒惰作斗争。</p>
-<p>想到了几件可以做的事情：<br>    1，用python写个Engima。<br>    2，定期去TPB抓纪录片的磁力链接然后转换成种子文件下载到本地，然后丢到迅雷下载。<br>    3，写个脚本每天去zimuzi.tv签到。<br>    4，写爬虫爬网站。</p>
-<p>然后除了python，git、JSON、Markdown也要了解。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>看完了 <a href="http://learnpythonthehardway.org/book/" target="_blank" rel="external">learn python the hard way</a> ,感觉什么也没学会，学到的都是片段，还没办法解]]>
-    </summary>
-    
-      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
-    
-      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
-    
-      <category term="Python" scheme="http://blog.lidongwei.com/categories/Python/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[Install Scrapy and Flask]]></title>
     <link href="http://blog.lidongwei.com/2015/12/27/Install%20Scrapy%20and%20Flask/"/>
     <id>http://blog.lidongwei.com/2015/12/27/Install Scrapy and Flask/</id>
@@ -171,34 +209,24 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Install LNMP on CentOS7]]></title>
-    <link href="http://blog.lidongwei.com/2015/12/27/Install%20LNMP%20on%20CentOS7/"/>
-    <id>http://blog.lidongwei.com/2015/12/27/Install LNMP on CentOS7/</id>
-    <published>2015-12-26T17:36:51.925Z</published>
-    <updated>2015-12-09T11:58:12.260Z</updated>
-    <content type="html"><![CDATA[<p>安装nginx<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">[user@loaclhost ~]$ sudo yum <span class="keyword">update</span></span><br><span class="line">[user@loaclhost ~]$ sudo yum upgrade</span><br><span class="line">[user@loaclhost ~]$ sudo yum install epel-release</span><br><span class="line">[user@loaclhost ~]$ sudo yum install nginx</span><br><span class="line">[user@loaclhost ~]$ sudo systemctl <span class="keyword">start</span> nginx</span><br><span class="line">[user@loaclhost ~]$ sudo systemctl enable nginx.service</span><br><span class="line">[user@loaclhost ~]$ sudo systemctl reload nginx.service</span><br><span class="line"></span><br><span class="line">[user@loaclhost ~]$ sudo vi /etc/nginx/conf.d/user.conf</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen       <span class="number">80</span>;</span><br><span class="line">    server_name  domainname.com;</span><br><span class="line"></span><br><span class="line">    # note that these lines are originally from the <span class="string">"location /"</span> block</span><br><span class="line">    root   /home/user/www;</span><br><span class="line">    index index.php index.html index.htm;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ =<span class="number">404</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    error_page <span class="number">404</span> /<span class="number">404</span>.html;</span><br><span class="line">    error_page <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span> /<span class="number">50</span>x.html;</span><br><span class="line">    location = /<span class="number">50</span>x.html &#123;</span><br><span class="line">        root /usr/share/nginx/html;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location ~ \.php$ &#123;</span><br><span class="line">        try_files <span class="variable">$uri</span> =<span class="number">404</span>;</span><br><span class="line">        fastcgi_split_path_info ^(.+\.php)(/.+)$;</span><br><span class="line">        fastcgi_pass unix:/var/run/php-fpm/php-fpm.sock;</span><br><span class="line">        fastcgi_index index.php;</span><br><span class="line">        fastcgi_param SCRIPT_FILENAME <span class="variable">$document</span>_root<span class="variable">$fastcgi</span>_script_name;</span><br><span class="line">        include fastcgi_params;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>安装php<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[user@loaclhost ~]$ sudo yum <span class="operator"><span class="keyword">install</span> php php-mysql php-fpm</span><br><span class="line">[<span class="keyword">user</span>@loaclhost ~]$ sudo systemctl <span class="keyword">start</span> php-fpm</span><br><span class="line">[<span class="keyword">user</span>@loaclhost ~]$ sudo systemctl <span class="keyword">enable</span> php-fpm</span><br><span class="line">[<span class="keyword">user</span>@loaclhost ~]$ sudo vi /etc/php-fpm.<span class="keyword">d</span>/www.conf</span><br><span class="line">listen = /<span class="keyword">var</span>/run/php-fpm/php-fpm.sock</span><br><span class="line">listen.owner = nobody</span><br><span class="line">listen.<span class="keyword">group</span> = nobody</span><br><span class="line"><span class="keyword">user</span> = nginx</span><br><span class="line"><span class="keyword">group</span> = nginx</span></span><br></pre></td></tr></table></figure></p>
-<p>新建用户<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo useradd -g nginx user2</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo chmod <span class="number">750</span> /home/user2/www -<span class="constant">R</span></span><br></pre></td></tr></table></figure></p>
-<p>安装mysql数据库<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install mariadb mariadb-server</span><br></pre></td></tr></table></figure></p>
-<p>初始化设置mysql<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo mysql_secure_installation</span><br></pre></td></tr></table></figure></p>
-<p>用root账号登陆mysql<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo mysql -u root -p</span><br></pre></td></tr></table></figure></p>
-<p>创建数据库和用户<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">MariaDB</span> [(<span class="built_in">none</span>)]&gt; CREATE DATABASE database_name;</span><br><span class="line"><span class="title">MariaDB</span> [(<span class="built_in">none</span>)]&gt; CREATE USER <span class="string">'user_name'</span>@<span class="string">'localhost'</span> IDENTIFIED BY <span class="string">'password'</span>;</span><br><span class="line"><span class="title">MariaDB</span> [(<span class="built_in">none</span>)]&gt; GRANT ALL PRIVILEGES ON database_<span class="regexp">name.*</span> TO <span class="string">'user_name'</span>@<span class="string">'localhost'</span>;</span><br><span class="line"><span class="title">MariaDB</span> [(<span class="built_in">none</span>)]&gt; FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure></p>
-<p>查看所有用户<br><figure class="highlight nsis"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [(<span class="literal">none</span>)]&gt; MariaDB [(<span class="literal">none</span>)]&gt; SELECT <span class="literal">user</span>,host,<span class="literal">user</span> FROM mysql.<span class="literal">user</span><span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
-<p>参看所有数据库<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">MariaDB</span> [(<span class="built_in">none</span>)]&gt; SHOW DATABASES;</span><br></pre></td></tr></table></figure></p>
-<p>参看所有表<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">MariaDB</span> [(<span class="built_in">none</span>)]&gt; USE database_name;</span><br><span class="line"><span class="title">MariaDB</span> [database_name]&gt; SHOW TABLES;</span><br></pre></td></tr></table></figure></p>
-<p>退出<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MariaDB [(<span class="type">none</span>)]&gt; <span class="keyword">exit</span></span><br></pre></td></tr></table></figure></p>
-<p>安装wordpress和自动更新<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>wget <span class="symbol">http:</span>/<span class="regexp">/wordpress.org/latest</span>.tar.gz;</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>chown -<span class="constant">R </span><span class="symbol">nginx:</span>nginx wp-content</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>vi wp-config.php</span><br><span class="line">添加</span><br><span class="line">define(<span class="string">'FS_METHOD'</span>, <span class="string">'direct'</span>);</span><br></pre></td></tr></table></figure></p>
-<p>其他：<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>vi /etc/sudoers</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install vsftpd</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo systemctl start vsftpd</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo systemctl enable vsftpd.service</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo yum install lrzsz</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]<span class="variable">$ </span>sudo cp /usr/share/zoneinfo/<span class="constant">Asia</span>/<span class="constant">Shanghai</span> /etc/localtime</span><br></pre></td></tr></table></figure></p>
+    <title><![CDATA[Learn-Python-0000]]></title>
+    <link href="http://blog.lidongwei.com/2015/12/27/learn-python-0000/"/>
+    <id>http://blog.lidongwei.com/2015/12/27/learn-python-0000/</id>
+    <published>2015-12-26T17:36:51.926Z</published>
+    <updated>2015-12-09T09:17:38.819Z</updated>
+    <content type="html"><![CDATA[<p>看完了 <a href="http://learnpythonthehardway.org/book/" target="_blank" rel="external">learn python the hard way</a> ,感觉什么也没学会，学到的都是片段，还没办法解决问题。对于CS知道的太少了，需要找门CS的课程来学习学习。<br>然后开始看 <a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 目前看到第三章，就已经补充RSA加密和质数、求导、微积分等这些早就丢给老师的东西了。因为都是英文的，我英文又一般，一章大概要看两遍才能完全理解，还是要抓紧时间看。为了能解决问题还有好多东西要学，不过学起来也蛮开心的，就是总是要跟自己的懒惰作斗争。</p>
+<p>想到了几件可以做的事情：<br>    1，用python写个Engima。<br>    2，定期去TPB抓纪录片的磁力链接然后转换成种子文件下载到本地，然后丢到迅雷下载。<br>    3，写个脚本每天去zimuzi.tv签到。<br>    4，写爬虫爬网站。</p>
+<p>然后除了python，git、JSON、Markdown也要了解。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>安装nginx<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span>]]>
+    <![CDATA[<p>看完了 <a href="http://learnpythonthehardway.org/book/" target="_blank" rel="external">learn python the hard way</a> ,感觉什么也没学会，学到的都是片段，还没办法解]]>
     </summary>
     
-      <category term="LNMP" scheme="http://blog.lidongwei.com/tags/LNMP/"/>
+      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
     
-      <category term="Linux" scheme="http://blog.lidongwei.com/tags/Linux/"/>
+      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
     
-      <category term="Linux" scheme="http://blog.lidongwei.com/categories/Linux/"/>
+      <category term="Python" scheme="http://blog.lidongwei.com/categories/Python/"/>
     
   </entry>
   
