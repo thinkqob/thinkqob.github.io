@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn Programming]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.thinkqob.com/"/>
-  <updated>2016-08-23T14:50:49.903Z</updated>
+  <updated>2015-12-09T09:17:31.511Z</updated>
   <id>http://www.thinkqob.com/</id>
   
   <author>
@@ -13,6 +13,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[CSforALL-4]]></title>
+    <link href="http://www.thinkqob.com/CSforALL3/"/>
+    <id>http://www.thinkqob.com/CSforALL3/</id>
+    <published>2016-11-05T11:29:49.134Z</published>
+    <updated>2015-12-09T09:17:31.511Z</updated>
+    <content type="html"><![CDATA[<p><a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 第四章讲计算机组成原理，从最基础的与非门二进制讲到汇编语言。涉及到一点离散数学，最大项最小项。感觉这章的内容不是特别重要，只是作为基础需要知道计算机的底层是怎么工作的。遇到了很多不认识的单词，要记住。大项最小项那块也不是很懂，全篇也没能很好的吸收，不过大概的意思是明白了。这章就不看第二遍了，继续往下看，遇到不懂得再查资料或者回过头来再看这章。笔记应该记录的更详细一点。</p>
+<p>翻墙不稳定导致数学公式没办法显示出来，看到的都是HTML。。。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 第四章讲计算机组成原理，从最基础的与非门二进制讲到汇编语言。涉及到一点离散数学，最大项最小项。感]]>
+    </summary>
+    
+      <category term="CSforALL" scheme="http://www.thinkqob.com/tags/CSforALL/"/>
+    
+      <category term="assembly language" scheme="http://www.thinkqob.com/tags/assembly-language/"/>
+    
+      <category term="python" scheme="http://www.thinkqob.com/tags/python/"/>
+    
+      <category term="CSforALL" scheme="http://www.thinkqob.com/categories/CSforALL/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Install SaltStack on CentOS 7]]></title>
