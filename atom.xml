@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[internal]]></title>
+  <title><![CDATA[Thinkqob]]></title>
   <subtitle><![CDATA[Learn Programming]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://blog.lidongwei.com/"/>
+  <link href="http://www.thinkqob.com/"/>
   <updated>2016-08-23T14:50:49.903Z</updated>
-  <id>http://blog.lidongwei.com/</id>
+  <id>http://www.thinkqob.com/</id>
   
   <author>
     <name><![CDATA[Thinkqob]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[Install SaltStack on CentOS 7]]></title>
-    <link href="http://blog.lidongwei.com/2016/08/23/Install%20SaltStack%20on%20CentOS%207/"/>
-    <id>http://blog.lidongwei.com/2016/08/23/Install SaltStack on CentOS 7/</id>
+    <link href="http://www.thinkqob.com/Install%20SaltStack%20on%20CentOS%207/"/>
+    <id>http://www.thinkqob.com/Install SaltStack on CentOS 7/</id>
     <published>2016-08-23T14:50:49.903Z</published>
     <updated>2016-08-23T14:50:49.903Z</updated>
     <content type="html"><![CDATA[<p>[Minion:]<br>install salt-minion on Minion host and config<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@Minion ~]<span class="comment"># sudo yum install https://repo.saltstack.com/yum/redhat/salt-repo-latest-1.el7.noarch.rpm </span></span><br><span class="line">[root@Minion ~]<span class="comment"># sudo yum clean expire-cache</span></span><br><span class="line">[root@Minion ~]<span class="comment"># sudo yum install salt-minion</span></span><br><span class="line">[root@Minion ~]<span class="comment"># sudo vi/etc/salt/minion</span></span><br><span class="line"></span><br><span class="line"><span class="literal">master</span>: <span class="keyword">master</span></span><br><span class="line"><span class="title">hash_type</span>: sha256</span><br><span class="line"></span><br><span class="line">[root@<span class="keyword">Master</span> <span class="title">~]# sudo</span> systemctl <span class="literal">start</span> salt-<span class="literal">master</span>.service</span><br><span class="line">[root@<span class="keyword">Master</span> <span class="title">~]# sudo</span> systemctl enable salt-<span class="literal">master</span>.service</span><br></pre></td></tr></table></figure></p>
@@ -31,18 +31,18 @@
     <![CDATA[<p>[Minion:]<br>install salt-minion on Minion host and config<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span cl]]>
     </summary>
     
-      <category term="Python" scheme="http://blog.lidongwei.com/tags/Python/"/>
+      <category term="Python" scheme="http://www.thinkqob.com/tags/Python/"/>
     
-      <category term="SaltStack" scheme="http://blog.lidongwei.com/tags/SaltStack/"/>
+      <category term="SaltStack" scheme="http://www.thinkqob.com/tags/SaltStack/"/>
     
-      <category term="SaltStack" scheme="http://blog.lidongwei.com/categories/SaltStack/"/>
+      <category term="SaltStack" scheme="http://www.thinkqob.com/categories/SaltStack/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Install LNMP on CentOS 7]]></title>
-    <link href="http://blog.lidongwei.com/2016/08/23/Install%20LNMP%20on%20CentOS%207/"/>
-    <id>http://blog.lidongwei.com/2016/08/23/Install LNMP on CentOS 7/</id>
+    <link href="http://www.thinkqob.com/Install%20LNMP%20on%20CentOS%207/"/>
+    <id>http://www.thinkqob.com/Install LNMP on CentOS 7/</id>
     <published>2016-08-23T14:13:36.349Z</published>
     <updated>2016-08-23T14:13:24.572Z</updated>
     <content type="html"><![CDATA[<p>安装nginx<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">[user@loaclhost ~]$ sudo yum <span class="keyword">update</span></span><br><span class="line">[user@loaclhost ~]$ sudo yum upgrade</span><br><span class="line">[user@loaclhost ~]$ sudo yum install epel-release</span><br><span class="line">[user@loaclhost ~]$ sudo yum install nginx</span><br><span class="line">[user@loaclhost ~]$ sudo systemctl <span class="keyword">start</span> nginx</span><br><span class="line">[user@loaclhost ~]$ sudo systemctl enable nginx.service</span><br><span class="line">[user@loaclhost ~]$ sudo systemctl reload nginx.service</span><br><span class="line"></span><br><span class="line">[user@loaclhost ~]$ sudo vi /etc/nginx/conf.d/user.conf</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen       <span class="number">80</span>;</span><br><span class="line">    server_name  domainname.com;</span><br><span class="line"></span><br><span class="line">    # note that these lines are originally from the <span class="string">"location /"</span> block</span><br><span class="line">    root   /home/user/www;</span><br><span class="line">    index index.php index.html index.htm;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ =<span class="number">404</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    error_page <span class="number">404</span> /<span class="number">404</span>.html;</span><br><span class="line">    error_page <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span> /<span class="number">50</span>x.html;</span><br><span class="line">    location = /<span class="number">50</span>x.html &#123;</span><br><span class="line">        root /usr/share/nginx/html;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location ~ \.php$ &#123;</span><br><span class="line">        try_files <span class="variable">$uri</span> =<span class="number">404</span>;</span><br><span class="line">        fastcgi_split_path_info ^(.+\.php)(/.+)$;</span><br><span class="line">        fastcgi_pass unix:/var/run/php-fpm/php-fpm.sock;</span><br><span class="line">        fastcgi_index index.php;</span><br><span class="line">        fastcgi_param SCRIPT_FILENAME <span class="variable">$document</span>_root<span class="variable">$fastcgi</span>_script_name;</span><br><span class="line">        include fastcgi_params;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -63,18 +63,18 @@
     <![CDATA[<p>安装nginx<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span>]]>
     </summary>
     
-      <category term="LNMP" scheme="http://blog.lidongwei.com/tags/LNMP/"/>
+      <category term="LNMP" scheme="http://www.thinkqob.com/tags/LNMP/"/>
     
-      <category term="Linux" scheme="http://blog.lidongwei.com/tags/Linux/"/>
+      <category term="Linux" scheme="http://www.thinkqob.com/tags/Linux/"/>
     
-      <category term="Linux" scheme="http://blog.lidongwei.com/categories/Linux/"/>
+      <category term="Linux" scheme="http://www.thinkqob.com/categories/Linux/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[The Future]]></title>
-    <link href="http://blog.lidongwei.com/2016/06/03/The%20Future/"/>
-    <id>http://blog.lidongwei.com/2016/06/03/The Future/</id>
+    <link href="http://www.thinkqob.com/The%20Future/"/>
+    <id>http://www.thinkqob.com/The Future/</id>
     <published>2016-06-03T04:18:27.562Z</published>
     <updated>2016-06-03T04:17:50.704Z</updated>
     <content type="html"><![CDATA[<h4 id="学习方向：">学习方向：</h4><h5 id="一，爬虫：">一，爬虫：</h5><p>urllib, urllib2, Scrapy</p>
@@ -86,18 +86,18 @@
 <h5 id="二，数据分析：">二，数据分析：</h5><p>NumPy, pandas, matplotlib, ]]>
     </summary>
     
-      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
+      <category term="learn" scheme="http://www.thinkqob.com/tags/learn/"/>
     
-      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
+      <category term="python" scheme="http://www.thinkqob.com/tags/python/"/>
     
-      <category term="Python" scheme="http://blog.lidongwei.com/categories/Python/"/>
+      <category term="Python" scheme="http://www.thinkqob.com/categories/Python/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Flask Web Development 第八章]]></title>
-    <link href="http://blog.lidongwei.com/2016/05/08/Flask%20Web%20Development%208/"/>
-    <id>http://blog.lidongwei.com/2016/05/08/Flask Web Development 8/</id>
+    <link href="http://www.thinkqob.com/Flask%20Web%20Development%208/"/>
+    <id>http://www.thinkqob.com/Flask Web Development 8/</id>
     <published>2016-05-08T06:18:44.753Z</published>
     <updated>2016-04-08T15:56:17.495Z</updated>
     <content type="html"><![CDATA[<p>最近工作忙也没时间认真学了，最近这两天调整心态专心看了几个小时。Flask.Web.Development看到第八章了，看的还是云里雾里的，各种扩展包什么的也是迷糊。今天查了好多bug出来才把页面弄得能打开。多数bug都是大小写和空格的位置，还好有作者的代码可以比对，不然真的是难以debug。</p>
@@ -106,18 +106,18 @@
     <![CDATA[<p>最近工作忙也没时间认真学了，最近这两天调整心态专心看了几个小时。Flask.Web.Development看到第八章了，看的还是云里雾里的，各种扩展包什么的也是迷糊。今天查了好多bug出来才把页面弄得能打开。多数bug都是大小写和空格的位置，还好有作者的代码可以比对，不然真]]>
     </summary>
     
-      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
+      <category term="learn" scheme="http://www.thinkqob.com/tags/learn/"/>
     
-      <category term="python，Flask" scheme="http://blog.lidongwei.com/tags/python%EF%BC%8CFlask/"/>
+      <category term="python，Flask" scheme="http://www.thinkqob.com/tags/python%EF%BC%8CFlask/"/>
     
-      <category term="Python" scheme="http://blog.lidongwei.com/categories/Python/"/>
+      <category term="Python" scheme="http://www.thinkqob.com/categories/Python/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Leran Flask 02]]></title>
-    <link href="http://blog.lidongwei.com/2016/04/04/Leran%20Flask%2002/"/>
-    <id>http://blog.lidongwei.com/2016/04/04/Leran Flask 02/</id>
+    <link href="http://www.thinkqob.com/Leran%20Flask%2002/"/>
+    <id>http://www.thinkqob.com/Leran Flask 02/</id>
     <published>2016-04-04T15:13:50.362Z</published>
     <updated>2016-02-29T13:11:04.174Z</updated>
     <content type="html"><![CDATA[<p>年前到现在停了一段时间没学，想着年后抓紧时间学起来，等到现在都快要三月了才认真起来。</p>
@@ -128,18 +128,18 @@
 <p>搁置太久感觉太多东西都忘记了，要重新复习一下知道怎么回事，还是用的少没记住不熟练。之前一直在跟着The Flask Mega-Tutorial学Flash，结果这个Tutor]]>
     </summary>
     
-      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
+      <category term="learn" scheme="http://www.thinkqob.com/tags/learn/"/>
     
-      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
+      <category term="python" scheme="http://www.thinkqob.com/tags/python/"/>
     
-      <category term="Python" scheme="http://blog.lidongwei.com/categories/Python/"/>
+      <category term="Python" scheme="http://www.thinkqob.com/categories/Python/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Leran Flask]]></title>
-    <link href="http://blog.lidongwei.com/2016/01/19/Leran%20Flask/"/>
-    <id>http://blog.lidongwei.com/2016/01/19/Leran Flask/</id>
+    <link href="http://www.thinkqob.com/Leran%20Flask/"/>
+    <id>http://www.thinkqob.com/Leran Flask/</id>
     <published>2016-01-18T16:12:19.815Z</published>
     <updated>2016-01-10T07:03:24.528Z</updated>
     <content type="html"><![CDATA[<p>上个月感冒，休息了一段时间，没有精力学python了。最近两周捡起来继续学，看了看《python核心编程》，看到第六章，看起来并不费劲，好多东西之前都有学过，所以看的比较快。书中的代码排版太烂了。</p>
@@ -152,20 +152,20 @@
 <p>看《python核心编程》的同时开始学Flask，按照官方的F]]>
     </summary>
     
-      <category term="Flask" scheme="http://blog.lidongwei.com/tags/Flask/"/>
+      <category term="Flask" scheme="http://www.thinkqob.com/tags/Flask/"/>
     
-      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
+      <category term="learn" scheme="http://www.thinkqob.com/tags/learn/"/>
     
-      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
+      <category term="python" scheme="http://www.thinkqob.com/tags/python/"/>
     
-      <category term="Python" scheme="http://blog.lidongwei.com/categories/Python/"/>
+      <category term="Python" scheme="http://www.thinkqob.com/categories/Python/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Python tutorial 2.7.10]]></title>
-    <link href="http://blog.lidongwei.com/2015/12/27/Python%20tutorial%202.7.10/"/>
-    <id>http://blog.lidongwei.com/2015/12/27/Python tutorial 2.7.10/</id>
+    <link href="http://www.thinkqob.com/Python%20tutorial%202.7.10/"/>
+    <id>http://www.thinkqob.com/Python tutorial 2.7.10/</id>
     <published>2015-12-26T17:36:51.927Z</published>
     <updated>2015-12-09T09:17:16.422Z</updated>
     <content type="html"><![CDATA[<p>CSforALL看完之后开始重新看LPTHW，看的是英文版，回顾复习一下之前所学的内容，看的很快，但是看到ex41的时候一点印象都没有，面向对象的东西还是理解的不够透彻。顺便看了看Python tutorial，中文版，读起来顺手了很多。基本都是之前看到过的内容，但是也有部分没涉及到的用法和函数，对之前是一个比较好的扩充，有空还要看一下lib库的文档。</p>
@@ -175,18 +175,18 @@
     <![CDATA[<p>CSforALL看完之后开始重新看LPTHW，看的是英文版，回顾复习一下之前所学的内容，看的很快，但是看到ex41的时候一点印象都没有，面向对象的东西还是理解的不够透彻。顺便看了看Python tutorial，中文版，读起来顺手了很多。基本都是之前看到过的内容，但是也有部]]>
     </summary>
     
-      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
+      <category term="learn" scheme="http://www.thinkqob.com/tags/learn/"/>
     
-      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
+      <category term="python" scheme="http://www.thinkqob.com/tags/python/"/>
     
-      <category term="Python" scheme="http://blog.lidongwei.com/categories/Python/"/>
+      <category term="Python" scheme="http://www.thinkqob.com/categories/Python/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Install Scrapy and Flask]]></title>
-    <link href="http://blog.lidongwei.com/2015/12/27/Install%20Scrapy%20and%20Flask/"/>
-    <id>http://blog.lidongwei.com/2015/12/27/Install Scrapy and Flask/</id>
+    <link href="http://www.thinkqob.com/Install%20Scrapy%20and%20Flask/"/>
+    <id>http://www.thinkqob.com/Install Scrapy and Flask/</id>
     <published>2015-12-26T17:36:51.926Z</published>
     <updated>2015-12-09T09:38:46.974Z</updated>
     <content type="html"><![CDATA[<p>安装python<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[user<span class="variable">@loaclhost</span> ~]$ sudo yum install <span class="keyword">python</span> <span class="keyword">python</span>-devel <span class="keyword">python</span>-setuptools <span class="keyword">python</span>-pip</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]$ sudo yum install <span class="keyword">python</span>-lxml <span class="keyword">python</span>-cffi</span><br><span class="line">[user<span class="variable">@loaclhost</span> ~]$ sudo pip install --upgrade pip</span><br></pre></td></tr></table></figure></p>
@@ -197,18 +197,18 @@
     <![CDATA[<p>安装python<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><b]]>
     </summary>
     
-      <category term="Linux" scheme="http://blog.lidongwei.com/tags/Linux/"/>
+      <category term="Linux" scheme="http://www.thinkqob.com/tags/Linux/"/>
     
-      <category term="Python" scheme="http://blog.lidongwei.com/tags/Python/"/>
+      <category term="Python" scheme="http://www.thinkqob.com/tags/Python/"/>
     
-      <category term="Python" scheme="http://blog.lidongwei.com/categories/Python/"/>
+      <category term="Python" scheme="http://www.thinkqob.com/categories/Python/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Learn-Python-0000]]></title>
-    <link href="http://blog.lidongwei.com/2015/12/27/learn-python-0000/"/>
-    <id>http://blog.lidongwei.com/2015/12/27/learn-python-0000/</id>
+    <link href="http://www.thinkqob.com/learn-python-0000/"/>
+    <id>http://www.thinkqob.com/learn-python-0000/</id>
     <published>2015-12-26T17:36:51.926Z</published>
     <updated>2015-12-09T09:17:38.819Z</updated>
     <content type="html"><![CDATA[<p>看完了 <a href="http://learnpythonthehardway.org/book/" target="_blank" rel="external">learn python the hard way</a> ,感觉什么也没学会，学到的都是片段，还没办法解决问题。对于CS知道的太少了，需要找门CS的课程来学习学习。<br>然后开始看 <a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 目前看到第三章，就已经补充RSA加密和质数、求导、微积分等这些早就丢给老师的东西了。因为都是英文的，我英文又一般，一章大概要看两遍才能完全理解，还是要抓紧时间看。为了能解决问题还有好多东西要学，不过学起来也蛮开心的，就是总是要跟自己的懒惰作斗争。</p>
@@ -219,18 +219,18 @@
     <![CDATA[<p>看完了 <a href="http://learnpythonthehardway.org/book/" target="_blank" rel="external">learn python the hard way</a> ,感觉什么也没学会，学到的都是片段，还没办法解]]>
     </summary>
     
-      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
+      <category term="learn" scheme="http://www.thinkqob.com/tags/learn/"/>
     
-      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
+      <category term="python" scheme="http://www.thinkqob.com/tags/python/"/>
     
-      <category term="Python" scheme="http://blog.lidongwei.com/categories/Python/"/>
+      <category term="Python" scheme="http://www.thinkqob.com/categories/Python/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[CSforALL-7]]></title>
-    <link href="http://blog.lidongwei.com/2015/12/27/CSforALL-7/"/>
-    <id>http://blog.lidongwei.com/2015/12/27/CSforALL-7/</id>
+    <link href="http://www.thinkqob.com/CSforALL-7/"/>
+    <id>http://www.thinkqob.com/CSforALL-7/</id>
     <published>2015-12-26T17:36:51.925Z</published>
     <updated>2015-12-09T09:17:34.443Z</updated>
     <content type="html"><![CDATA[<p>第七章讲的是计算机上的三种问题，简单的，困难的，和不可能的。看了一半并看不懂。遇到好多不认识的单词和数学公式和名词，单词查了之后也不能理解他真正的意思，暂时不看了。这章更多的是在讲计算机理论，这个虽然很重要但是在学好python之前可以放一下，回过头来再重新看CSforALL。昨天又翻了一下learn python the hard way，发现除了和CSforALL重复的地方之外，其他的都忘记了。还是回去再快速的看一遍lpthw吧，Python核心编程涵盖的很全面也有点啰嗦，不过后面几章网络编程什么的还没有见过，应该可以看看的。</p>
@@ -240,18 +240,18 @@
     <![CDATA[<p>第七章讲的是计算机上的三种问题，简单的，困难的，和不可能的。看了一半并看不懂。遇到好多不认识的单词和数学公式和名词，单词查了之后也不能理解他真正的意思，暂时不看了。这章更多的是在讲计算机理论，这个虽然很重要但是在学好python之前可以放一下，回过头来再重新看CSforAL]]>
     </summary>
     
-      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
+      <category term="learn" scheme="http://www.thinkqob.com/tags/learn/"/>
     
-      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
+      <category term="python" scheme="http://www.thinkqob.com/tags/python/"/>
     
-      <category term="CSforALL" scheme="http://blog.lidongwei.com/categories/CSforALL/"/>
+      <category term="CSforALL" scheme="http://www.thinkqob.com/categories/CSforALL/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[CSforALL-6]]></title>
-    <link href="http://blog.lidongwei.com/2015/12/27/CSforALL-6/"/>
-    <id>http://blog.lidongwei.com/2015/12/27/CSforALL-6/</id>
+    <link href="http://www.thinkqob.com/CSforALL-6/"/>
+    <id>http://www.thinkqob.com/CSforALL-6/</id>
     <published>2015-12-26T17:36:51.916Z</published>
     <updated>2015-12-09T09:17:33.628Z</updated>
     <content type="html"><![CDATA[<p>还在看CS for All，已经看到第六章了，一共七章，第五章讲函数，第六章讲面向对象编程，前面讲讲Class看的还挺明白的，后面开始讲了一些VPython的东西就看不太明白了，简单的看了一下，直接跳过看结尾，然后看下一章。之前第四章讲内存寄存器汇编什么的，也是看了一部分就直接跳过了。这章的VPython也直接跳过吧，继续往下看，碰到问题再回过头来认真看看，或者在其他书中会覆盖到这些知识点。</p>
@@ -262,18 +262,18 @@
     <![CDATA[<p>还在看CS for All，已经看到第六章了，一共七章，第五章讲函数，第六章讲面向对象编程，前面讲讲Class看的还挺明白的，后面开始讲了一些VPython的东西就看不太明白了，简单的看了一下，直接跳过看结尾，然后看下一章。之前第四章讲内存寄存器汇编什么的，也是看了一部分就]]>
     </summary>
     
-      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
+      <category term="learn" scheme="http://www.thinkqob.com/tags/learn/"/>
     
-      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
+      <category term="python" scheme="http://www.thinkqob.com/tags/python/"/>
     
-      <category term="CSforALL" scheme="http://blog.lidongwei.com/categories/CSforALL/"/>
+      <category term="CSforALL" scheme="http://www.thinkqob.com/categories/CSforALL/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[CSforALL-5]]></title>
-    <link href="http://blog.lidongwei.com/2015/12/27/CSforALL-5/"/>
-    <id>http://blog.lidongwei.com/2015/12/27/CSforALL-5/</id>
+    <link href="http://www.thinkqob.com/CSforALL-5/"/>
+    <id>http://www.thinkqob.com/CSforALL-5/</id>
     <published>2015-12-26T17:36:51.915Z</published>
     <updated>2015-12-09T09:17:32.813Z</updated>
     <content type="html"><![CDATA[<p>在看<a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 第五章，最后他给的那段代码我发现好多不一样的地方，是不一样但并不一定是错误。在open文件时候附带r和w的时候，上面写的是”r”下面是’w’。这个单双引号的问题估计问题不大但我觉得还是要一致的好，所以我都用单引号。另一个问题是在这段代码里的输入用的是input，因为之前书里都是用的raw_input，也就是说默认用的是python2，但是不一样的地方他也会提醒你说python3里面应该用什么，但是这段代码直接就用了python3？我也不确定。</p>
@@ -284,18 +284,18 @@
     <![CDATA[<p>在看<a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 第五章，最后他给的那段代码我发现好多不一样的地方，是不一样但并不一定是错误。在open文件时]]>
     </summary>
     
-      <category term="learn" scheme="http://blog.lidongwei.com/tags/learn/"/>
+      <category term="learn" scheme="http://www.thinkqob.com/tags/learn/"/>
     
-      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
+      <category term="python" scheme="http://www.thinkqob.com/tags/python/"/>
     
-      <category term="CSforALL" scheme="http://blog.lidongwei.com/categories/CSforALL/"/>
+      <category term="CSforALL" scheme="http://www.thinkqob.com/categories/CSforALL/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[CSforALL-4]]></title>
-    <link href="http://blog.lidongwei.com/2015/12/27/CSforALL-4/"/>
-    <id>http://blog.lidongwei.com/2015/12/27/CSforALL-4/</id>
+    <link href="http://www.thinkqob.com/CSforALL-4/"/>
+    <id>http://www.thinkqob.com/CSforALL-4/</id>
     <published>2015-12-26T17:36:51.915Z</published>
     <updated>2015-12-09T09:17:31.511Z</updated>
     <content type="html"><![CDATA[<p><a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 第四章讲计算机组成原理，从最基础的与非门二进制讲到汇编语言。涉及到一点离散数学，最大项最小项。感觉这章的内容不是特别重要，只是作为基础需要知道计算机的底层是怎么工作的。遇到了很多不认识的单词，要记住。大项最小项那块也不是很懂，全篇也没能很好的吸收，不过大概的意思是明白了。这章就不看第二遍了，继续往下看，遇到不懂得再查资料或者回过头来再看这章。笔记应该记录的更详细一点。</p>
@@ -305,13 +305,13 @@
     <![CDATA[<p><a href="https://www.cs.hmc.edu/csforall/" target="_blank" rel="external">CS for All</a> 第四章讲计算机组成原理，从最基础的与非门二进制讲到汇编语言。涉及到一点离散数学，最大项最小项。感]]>
     </summary>
     
-      <category term="CSforALL" scheme="http://blog.lidongwei.com/tags/CSforALL/"/>
+      <category term="CSforALL" scheme="http://www.thinkqob.com/tags/CSforALL/"/>
     
-      <category term="assembly language" scheme="http://blog.lidongwei.com/tags/assembly-language/"/>
+      <category term="assembly language" scheme="http://www.thinkqob.com/tags/assembly-language/"/>
     
-      <category term="python" scheme="http://blog.lidongwei.com/tags/python/"/>
+      <category term="python" scheme="http://www.thinkqob.com/tags/python/"/>
     
-      <category term="CSforALL" scheme="http://blog.lidongwei.com/categories/CSforALL/"/>
+      <category term="CSforALL" scheme="http://www.thinkqob.com/categories/CSforALL/"/>
     
   </entry>
   
