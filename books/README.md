@@ -9,6 +9,7 @@
 - The Flask Mega-Tutorial
 - Flask Web Development
 - Web Scraping with Python
+- Python高手之路
 
 ## Shell
 - Learn shell
